@@ -1,7 +1,7 @@
 from flask import Flask, request
 import json
 
-from shift_app.shift_generator import ShiftGenerator
+from src.shift_generator import ShiftGenerator
 
 app = Flask(__name__)
 
