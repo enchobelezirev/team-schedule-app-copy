@@ -9,7 +9,7 @@ shiftGenerator = ShiftGenerator()
 
 @app.route("/")
 def hello():
-    return json.dumps('Hi from TeamSchedule AI!')
+    return json.dumps('Hi from Team Schedule AI!')
 
 
 @app.route("/generate", methods=["POST"])
