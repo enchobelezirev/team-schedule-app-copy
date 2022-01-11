@@ -2,7 +2,7 @@ from flask import Flask, request
 from flask_cors import CORS, cross_origin
 import json
 
-from app.shift_generator import ShiftGenerator
+from shift_app.shift_generator import ShiftGenerator
 
 app = Flask(__name__)
 cors = CORS(app)

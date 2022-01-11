@@ -1,4 +1,4 @@
-from app.shift_generator import ShiftGenerator
+from shift_app.shift_generator import ShiftGenerator
 
 shiftGenerator = ShiftGenerator()
 
