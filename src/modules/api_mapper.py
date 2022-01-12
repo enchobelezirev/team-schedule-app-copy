@@ -4,13 +4,13 @@ from datetime import datetime
 from src.models.Employee import Employee
 from src.models.Shift import Shift
 
-def map_request_to_classes(request) -> Tuple[List[Employee], datetime]:
+def map_request_to_classes(requestJson: str) -> Tuple[List[Employee], datetime]:
     #TODO use these as well
-    managerId = request.json['ManagerId']
-    weekStart = datetime(request.json['MondayOfWeekToGenerateFor']['year'], request.json['MondayOfWeekToGenerateFor']['month'], request.json['MondayOfWeekToGenerateFor']['date'])
+    managerId = requestJson['ManagerId']
+    weekStart = datetime(requestJson['MondayOfWeekToGenerateFor']['year'], requestJson['MondayOfWeekToGenerateFor']['month'], requestJson['MondayOfWeekToGenerateFor']['date'])
     
     employees = []
-    for employee in request.json['Employees']:
+    for employee in requestJson['Employees']:
         currUid = employee['UserId']
         currWeeklyHours = int(employee['Standard Weekly Hours'])
         

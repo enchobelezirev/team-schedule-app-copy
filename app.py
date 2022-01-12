@@ -15,13 +15,9 @@ def hello():
 
 @app.route("/generate", methods=["POST"])
 def generate():
-    employees, weekStart = map_request_to_classes(request)
+    employees, weekStart = map_request_to_classes(request.json)
     shiftGenerator.create_weekly_schedule(employees, weekStart)  
 
     return json.dumps(employees[0].toJson())
 
     #return json.dumps(request.json)
-
-if __name__ == '__main__':
-    from werkzeug.serving import run_simple
-    run_simple('localhost', 9002, app)
