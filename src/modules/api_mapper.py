@@ -1,11 +1,10 @@
-from typing import List, Tuple
 from datetime import datetime
 
+from src.models.Schedule import Schedule
 from src.models.Employee import Employee
 from src.models.Shift import Shift
 
-def map_request_to_classes(requestJson: str) -> Tuple[List[Employee], datetime]:
-    #TODO use these as well
+def map_request_to_classes(requestJson: str) -> Schedule:
     managerId = requestJson['ManagerId']
     weekStart = datetime(requestJson['MondayOfWeekToGenerateFor']['year'], requestJson['MondayOfWeekToGenerateFor']['month'], requestJson['MondayOfWeekToGenerateFor']['date'])
     
@@ -26,5 +25,4 @@ def map_request_to_classes(requestJson: str) -> Tuple[List[Employee], datetime]:
         newEmployee = Employee(currUid, currWeeklyHours, currShifts)
         employees.append(newEmployee)
     
-    #print(employees)
-    return employees, weekStart
+    return Schedule(managerId, weekStart, employees)

@@ -8,10 +8,11 @@ def generate_sample(sample_path: str) -> str:
     f = open(sample_path)
     sample_json = json.load(f)
 
-    employees, weekStart = map_request_to_classes(sample_json)
-    shiftGenerator.create_weekly_schedule(employees, weekStart)  
+    schedule = map_request_to_classes(sample_json)
+    shiftGenerator.create_weekly_schedule(schedule.employees, schedule.weekStart)  
 
-    return json.dumps(employees[0].toJson())
+    result = json.loads(schedule.toJson())
+    return json.dumps(result)
 
 sample_json_path = 'sample_data/single_employee.json'
-print(generate_sample(sample_json_path))
+print(generate_sample(sample_json_path).replace('', ''))

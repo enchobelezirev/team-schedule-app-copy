@@ -37,4 +37,4 @@ class Shift:
         print(f' Duration: {self.duration}')
 
     def toJson(self):
-        return '"StartTime": "' + str(self.startTime) + '", "EndTime": "' + str(self.endTime) + '", "Duration": "' + str(self.duration) + '"'
+        return '{"StartTime": "' + str(self.startTime) + '", "EndTime": "' + str(self.endTime) + '", "Duration": "' + str(self.duration) + '"}'
