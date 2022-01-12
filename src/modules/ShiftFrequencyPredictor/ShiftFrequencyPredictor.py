@@ -1,7 +1,6 @@
 import math
 from typing import List
 from datetime import datetime, timedelta
-import pendulum as pdl
 
 from src.models.Employee import Employee
 from src.models.Shift import Shift
@@ -52,38 +51,23 @@ class ShiftFrequencyPredictor:
     def _remove_illegal_shifts(self, chosenShifts: List[Shift], weekshiftCandidates: List[Shift], weekStart: datetime) -> List[Shift]:
         filteredShifts = weekshiftCandidates.copy()
         newShift = chosenShifts[len(chosenShifts)-1]
-        bestShiftStart = pdl.datetime(newShift.startTime.year,
-                                        newShift.startTime.month,
-                                        newShift.startTime.day,
-                                        newShift.startTime.hour,
-                                        newShift.startTime.minute
-                                    )
-        bestShiftEnd = pdl.datetime(newShift.endTime.year,
-                                        newShift.endTime.month,
-                                        newShift.endTime.day,
-                                        newShift.endTime.hour,
-                                        newShift.endTime.minute                                
-                                    )
+        bestShiftStart = newShift.startTime
+        bestShiftEnd = newShift.endTime
         
         for weekshiftCandidate in weekshiftCandidates:
             shiftCandidate = Shift(weekStart + timedelta(days = weekshiftCandidate.weekday, hours = weekshiftCandidate.startTime), 
                                     weekStart + timedelta(days = weekshiftCandidate.weekday, hours = weekshiftCandidate.startTime + weekshiftCandidate.fullDuration / 60), 
                                     weekshiftCandidate.duration)
             
-            pendShiftStart = pdl.datetime(shiftCandidate.startTime.year,
-                                        shiftCandidate.startTime.month,
-                                        shiftCandidate.startTime.day,
-                                        shiftCandidate.startTime.hour,
-                                        shiftCandidate.startTime.minute                                
-                                    )
-            pendShiftEnd = pdl.datetime(shiftCandidate.endTime.year,
-                                        shiftCandidate.endTime.month,
-                                        shiftCandidate.endTime.day,
-                                        shiftCandidate.endTime.hour,
-                                        shiftCandidate.endTime.minute                                
-                                    )
+            pendShiftStart = shiftCandidate.startTime
+            pendShiftEnd = shiftCandidate.endTime
             
-            if (bestShiftEnd.diff(pendShiftStart).in_hours() < 12 or bestShiftStart.diff(pendShiftEnd).in_hours() < 12) or (pendShiftStart == bestShiftStart and pendShiftEnd == bestShiftEnd):
+            startDiff = abs(bestShiftEnd - pendShiftStart)
+            endDiff = abs(bestShiftStart - pendShiftEnd)
+            
+            startHourDiff = startDiff.days * 24 + startDiff.seconds // 3600
+            endHourDiff = endDiff.days * 24 + endDiff.seconds // 3600
+            if (startHourDiff < 12 or endHourDiff < 12) or (pendShiftStart == bestShiftStart and pendShiftEnd == bestShiftEnd):
                 filteredShifts.remove(weekshiftCandidate)
         
         return filteredShifts
