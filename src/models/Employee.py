@@ -11,7 +11,7 @@ class Employee:
     def toJson(self):
         result = '{'
         result += f'"UserId": "{self.uid}",'
-        result += '"PastShifts": ['
+        result += '"NextWeekShifts": ['
 
         shift_jsons = []
         for shift in self.nextWeekShifts:
