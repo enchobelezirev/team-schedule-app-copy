@@ -1,7 +1,8 @@
-from flask import Flask, request
 import json
+from flask import Flask, request
+from src.modules.api_mapper import *
 
-from shift_app.shift_generator import ShiftGenerator
+from src.shift_generator import ShiftGenerator
 
 app = Flask(__name__)
 
@@ -14,10 +15,8 @@ def hello():
 
 @app.route("/generate", methods=["POST"])
 def generate():
+    schedule = map_request_to_classes(request.json)
+    shiftGenerator.create_weekly_schedule(schedule.employees, schedule.weekStart)  
 
-    #TODO: Add real
-    # employees, weekStart = map_request_to_classes(request)
-    # create_weekly_schedule(employees, weekStart)   
-    # return json.dumps(employees[0].toJson())
-
-    return json.dumps(request.json)
+    result = json.loads(schedule.toJson())
+    return json.dumps(result)
