@@ -1,0 +1,1801 @@
+{
+    "ManagerId": "Random",
+    "MondayOfWeekToGenerateFor": {
+      "fullDate": "2022-1-10",
+      "year": 2022,
+      "month": 0,
+      "date": 10
+    },
+    "Employees": [
+      {
+        "UserId": "1",
+        "Standard Weekly Hours": 35,
+        "PastShifts": [
+          {
+            "externalCode": "b7e69ac0-6e12-46f6-63f5-7517df2e044b",
+            "userId": "1",
+            "startDate": {
+              "fullDate": "2021-11-30",
+              "year": 2021,
+              "month": 10,
+              "date": 30
+            },
+            "endDate": {
+              "fullDate": "2021-11-30",
+              "year": 2021,
+              "month": 10,
+              "date": 30
+            },
+            "timeType": "DEFAULT_PLANNED_WORK",
+            "tentative": true,
+            "startTime": {
+              "time": "13:00",
+              "hours": 13,
+              "minutes": 0
+            },
+            "endTime": {
+              "time": "19:00",
+              "hours": 19,
+              "minutes": 0
+            },
+            "duration": 360,
+            "breaks": [],
+            "breaksToBeDeleted": [],
+            "dayBreaks": [],
+            "dayBreaksPrev": [],
+            "allBreaks": [],
+            "nightShift": false,
+            "isTimeTrackingNightShift": false,
+            "workScheduleDay": "2"
+          },
+          {
+            "externalCode": "ae8b8280-d401-4adc-1985-752d58cd1f6d",
+            "userId": "1",
+            "startDate": {
+              "fullDate": "2021-12-1",
+              "year": 2021,
+              "month": 11,
+              "date": 1
+            },
+            "endDate": {
+              "fullDate": "2021-12-1",
+              "year": 2021,
+              "month": 11,
+              "date": 1
+            },
+            "timeType": "DEFAULT_PLANNED_WORK",
+            "tentative": true,
+            "startTime": {
+              "time": "13:00",
+              "hours": 13,
+              "minutes": 0
+            },
+            "endTime": {
+              "time": "19:00",
+              "hours": 19,
+              "minutes": 0
+            },
+            "duration": 360,
+            "breaks": [],
+            "breaksToBeDeleted": [],
+            "dayBreaks": [],
+            "dayBreaksPrev": [],
+            "allBreaks": [],
+            "nightShift": false,
+            "isTimeTrackingNightShift": false,
+            "workScheduleDay": "3"
+          },
+          {
+            "externalCode": "070002b9-be34-5933-cb1a-4e8b947895fb",
+            "userId": "1",
+            "startDate": {
+              "fullDate": "2021-12-2",
+              "year": 2021,
+              "month": 11,
+              "date": 2
+            },
+            "endDate": {
+              "fullDate": "2021-12-2",
+              "year": 2021,
+              "month": 11,
+              "date": 2
+            },
+            "timeType": "DEFAULT_PLANNED_WORK",
+            "tentative": true,
+            "startTime": {
+              "time": "13:00",
+              "hours": 13,
+              "minutes": 0
+            },
+            "endTime": {
+              "time": "19:00",
+              "hours": 19,
+              "minutes": 0
+            },
+            "duration": 360,
+            "breaks": [],
+            "breaksToBeDeleted": [],
+            "dayBreaks": [],
+            "dayBreaksPrev": [],
+            "allBreaks": [],
+            "nightShift": false,
+            "isTimeTrackingNightShift": false,
+            "workScheduleDay": "4"
+          },
+          {
+            "externalCode": "a04891ed-7041-8f19-0c7c-f61367091374",
+            "userId": "1",
+            "startDate": {
+              "fullDate": "2021-12-3",
+              "year": 2021,
+              "month": 11,
+              "date": 3
+            },
+            "endDate": {
+              "fullDate": "2021-12-3",
+              "year": 2021,
+              "month": 11,
+              "date": 3
+            },
+            "timeType": "DEFAULT_PLANNED_WORK",
+            "tentative": true,
+            "startTime": {
+              "time": "13:00",
+              "hours": 13,
+              "minutes": 0
+            },
+            "endTime": {
+              "time": "19:00",
+              "hours": 19,
+              "minutes": 0
+            },
+            "duration": 360,
+            "breaks": [],
+            "breaksToBeDeleted": [],
+            "dayBreaks": [],
+            "dayBreaksPrev": [],
+            "allBreaks": [],
+            "nightShift": false,
+            "isTimeTrackingNightShift": false,
+            "workScheduleDay": "5"
+          },
+          {
+            "externalCode": "5837af42-4d32-014a-f507-ab7a1b947255",
+            "userId": "1",
+            "startDate": {
+              "fullDate": "2021-12-4",
+              "year": 2021,
+              "month": 11,
+              "date": 4
+            },
+            "endDate": {
+              "fullDate": "2021-12-4",
+              "year": 2021,
+              "month": 11,
+              "date": 4
+            },
+            "timeType": "DEFAULT_PLANNED_WORK",
+            "tentative": true,
+            "startTime": {
+              "time": "13:00",
+              "hours": 13,
+              "minutes": 0
+            },
+            "endTime": {
+              "time": "19:00",
+              "hours": 19,
+              "minutes": 0
+            },
+            "duration": 360,
+            "breaks": [],
+            "breaksToBeDeleted": [],
+            "dayBreaks": [],
+            "dayBreaksPrev": [],
+            "allBreaks": [],
+            "nightShift": false,
+            "isTimeTrackingNightShift": false,
+            "workScheduleDay": "6"
+          },
+          {
+            "externalCode": "95691904-55f7-37b5-7f1a-68c3e519b0d8",
+            "userId": "1",
+            "startDate": {
+              "fullDate": "2021-12-7",
+              "year": 2021,
+              "month": 11,
+              "date": 7
+            },
+            "endDate": {
+              "fullDate": "2021-12-7",
+              "year": 2021,
+              "month": 11,
+              "date": 7
+            },
+            "timeType": "DEFAULT_PLANNED_WORK",
+            "tentative": true,
+            "startTime": {
+              "time": "13:00",
+              "hours": 13,
+              "minutes": 0
+            },
+            "endTime": {
+              "time": "19:00",
+              "hours": 19,
+              "minutes": 0
+            },
+            "duration": 360,
+            "breaks": [],
+            "breaksToBeDeleted": [],
+            "dayBreaks": [],
+            "dayBreaksPrev": [],
+            "allBreaks": [],
+            "nightShift": false,
+            "isTimeTrackingNightShift": false,
+            "workScheduleDay": "2"
+          },
+          {
+            "externalCode": "c7247a12-22cd-2060-d319-64962d340ff1",
+            "userId": "1",
+            "startDate": {
+              "fullDate": "2021-12-8",
+              "year": 2021,
+              "month": 11,
+              "date": 8
+            },
+            "endDate": {
+              "fullDate": "2021-12-8",
+              "year": 2021,
+              "month": 11,
+              "date": 8
+            },
+            "timeType": "DEFAULT_PLANNED_WORK",
+            "tentative": true,
+            "startTime": {
+              "time": "13:00",
+              "hours": 13,
+              "minutes": 0
+            },
+            "endTime": {
+              "time": "19:00",
+              "hours": 19,
+              "minutes": 0
+            },
+            "duration": 360,
+            "breaks": [],
+            "breaksToBeDeleted": [],
+            "dayBreaks": [],
+            "dayBreaksPrev": [],
+            "allBreaks": [],
+            "nightShift": false,
+            "isTimeTrackingNightShift": false,
+            "workScheduleDay": "3"
+          },
+          {
+            "externalCode": "a14e4f2b-552a-8f4e-bffe-d60311c4cb68",
+            "userId": "1",
+            "startDate": {
+              "fullDate": "2021-12-9",
+              "year": 2021,
+              "month": 11,
+              "date": 9
+            },
+            "endDate": {
+              "fullDate": "2021-12-9",
+              "year": 2021,
+              "month": 11,
+              "date": 9
+            },
+            "timeType": "DEFAULT_PLANNED_WORK",
+            "tentative": true,
+            "startTime": {
+              "time": "13:00",
+              "hours": 13,
+              "minutes": 0
+            },
+            "endTime": {
+              "time": "19:00",
+              "hours": 19,
+              "minutes": 0
+            },
+            "duration": 360,
+            "breaks": [],
+            "breaksToBeDeleted": [],
+            "dayBreaks": [],
+            "dayBreaksPrev": [],
+            "allBreaks": [],
+            "nightShift": false,
+            "isTimeTrackingNightShift": false,
+            "workScheduleDay": "4"
+          },
+          {
+            "externalCode": "d08f8959-2576-6b42-a1cc-1091fdf66445",
+            "userId": "1",
+            "startDate": {
+              "fullDate": "2021-12-10",
+              "year": 2021,
+              "month": 11,
+              "date": 10
+            },
+            "endDate": {
+              "fullDate": "2021-12-10",
+              "year": 2021,
+              "month": 11,
+              "date": 10
+            },
+            "timeType": "DEFAULT_PLANNED_WORK",
+            "tentative": true,
+            "startTime": {
+              "time": "13:00",
+              "hours": 13,
+              "minutes": 0
+            },
+            "endTime": {
+              "time": "19:00",
+              "hours": 19,
+              "minutes": 0
+            },
+            "duration": 360,
+            "breaks": [],
+            "breaksToBeDeleted": [],
+            "dayBreaks": [],
+            "dayBreaksPrev": [],
+            "allBreaks": [],
+            "nightShift": false,
+            "isTimeTrackingNightShift": false,
+            "workScheduleDay": "5"
+          },
+          {
+            "externalCode": "c8ea6169-a970-b9f9-f160-c325184a7c54",
+            "userId": "1",
+            "startDate": {
+              "fullDate": "2021-12-11",
+              "year": 2021,
+              "month": 11,
+              "date": 11
+            },
+            "endDate": {
+              "fullDate": "2021-12-11",
+              "year": 2021,
+              "month": 11,
+              "date": 11
+            },
+            "timeType": "DEFAULT_PLANNED_WORK",
+            "tentative": true,
+            "startTime": {
+              "time": "13:00",
+              "hours": 13,
+              "minutes": 0
+            },
+            "endTime": {
+              "time": "19:00",
+              "hours": 19,
+              "minutes": 0
+            },
+            "duration": 360,
+            "breaks": [],
+            "breaksToBeDeleted": [],
+            "dayBreaks": [],
+            "dayBreaksPrev": [],
+            "allBreaks": [],
+            "nightShift": false,
+            "isTimeTrackingNightShift": false,
+            "workScheduleDay": "6"
+          },
+          {
+            "externalCode": "cf673886-2e60-e792-c86b-e3041e729d41",
+            "userId": "1",
+            "startDate": {
+              "fullDate": "2021-12-14",
+              "year": 2021,
+              "month": 11,
+              "date": 14
+            },
+            "endDate": {
+              "fullDate": "2021-12-14",
+              "year": 2021,
+              "month": 11,
+              "date": 14
+            },
+            "timeType": "DEFAULT_PLANNED_WORK",
+            "tentative": true,
+            "startTime": {
+              "time": "13:00",
+              "hours": 13,
+              "minutes": 0
+            },
+            "endTime": {
+              "time": "19:00",
+              "hours": 19,
+              "minutes": 0
+            },
+            "duration": 360,
+            "breaks": [],
+            "breaksToBeDeleted": [],
+            "dayBreaks": [],
+            "dayBreaksPrev": [],
+            "allBreaks": [],
+            "nightShift": false,
+            "isTimeTrackingNightShift": false,
+            "workScheduleDay": "2"
+          },
+          {
+            "externalCode": "8d99f715-f535-43c9-63fd-58ed0e2c44c7",
+            "userId": "1",
+            "startDate": {
+              "fullDate": "2021-12-15",
+              "year": 2021,
+              "month": 11,
+              "date": 15
+            },
+            "endDate": {
+              "fullDate": "2021-12-15",
+              "year": 2021,
+              "month": 11,
+              "date": 15
+            },
+            "timeType": "DEFAULT_PLANNED_WORK",
+            "tentative": true,
+            "startTime": {
+              "time": "13:00",
+              "hours": 13,
+              "minutes": 0
+            },
+            "endTime": {
+              "time": "19:00",
+              "hours": 19,
+              "minutes": 0
+            },
+            "duration": 360,
+            "breaks": [],
+            "breaksToBeDeleted": [],
+            "dayBreaks": [],
+            "dayBreaksPrev": [],
+            "allBreaks": [],
+            "nightShift": false,
+            "isTimeTrackingNightShift": false,
+            "workScheduleDay": "3"
+          },
+          {
+            "externalCode": "5091d180-7d53-4249-4e53-731b247690d8",
+            "userId": "1",
+            "startDate": {
+              "fullDate": "2021-12-16",
+              "year": 2021,
+              "month": 11,
+              "date": 16
+            },
+            "endDate": {
+              "fullDate": "2021-12-16",
+              "year": 2021,
+              "month": 11,
+              "date": 16
+            },
+            "timeType": "DEFAULT_PLANNED_WORK",
+            "tentative": true,
+            "startTime": {
+              "time": "13:00",
+              "hours": 13,
+              "minutes": 0
+            },
+            "endTime": {
+              "time": "19:00",
+              "hours": 19,
+              "minutes": 0
+            },
+            "duration": 360,
+            "breaks": [],
+            "breaksToBeDeleted": [],
+            "dayBreaks": [],
+            "dayBreaksPrev": [],
+            "allBreaks": [],
+            "nightShift": false,
+            "isTimeTrackingNightShift": false,
+            "workScheduleDay": "4"
+          },
+          {
+            "externalCode": "3893a3b8-0922-3dfa-ecb1-ad4ff71f254b",
+            "userId": "1",
+            "startDate": {
+              "fullDate": "2021-12-17",
+              "year": 2021,
+              "month": 11,
+              "date": 17
+            },
+            "endDate": {
+              "fullDate": "2021-12-17",
+              "year": 2021,
+              "month": 11,
+              "date": 17
+            },
+            "timeType": "DEFAULT_PLANNED_WORK",
+            "tentative": true,
+            "startTime": {
+              "time": "13:00",
+              "hours": 13,
+              "minutes": 0
+            },
+            "endTime": {
+              "time": "19:00",
+              "hours": 19,
+              "minutes": 0
+            },
+            "duration": 360,
+            "breaks": [],
+            "breaksToBeDeleted": [],
+            "dayBreaks": [],
+            "dayBreaksPrev": [],
+            "allBreaks": [],
+            "nightShift": false,
+            "isTimeTrackingNightShift": false,
+            "workScheduleDay": "5"
+          },
+          {
+            "externalCode": "7e963359-567a-72a7-5fb5-c3185b71ef1d",
+            "userId": "1",
+            "startDate": {
+              "fullDate": "2021-12-18",
+              "year": 2021,
+              "month": 11,
+              "date": 18
+            },
+            "endDate": {
+              "fullDate": "2021-12-18",
+              "year": 2021,
+              "month": 11,
+              "date": 18
+            },
+            "timeType": "DEFAULT_PLANNED_WORK",
+            "tentative": true,
+            "startTime": {
+              "time": "13:00",
+              "hours": 13,
+              "minutes": 0
+            },
+            "endTime": {
+              "time": "19:00",
+              "hours": 19,
+              "minutes": 0
+            },
+            "duration": 360,
+            "breaks": [],
+            "breaksToBeDeleted": [],
+            "dayBreaks": [],
+            "dayBreaksPrev": [],
+            "allBreaks": [],
+            "nightShift": false,
+            "isTimeTrackingNightShift": false,
+            "workScheduleDay": "6"
+          },
+          {
+            "externalCode": "79909a85-2fc7-5820-6819-ca623a385154",
+            "userId": "1",
+            "startDate": {
+              "fullDate": "2021-12-21",
+              "year": 2021,
+              "month": 11,
+              "date": 21
+            },
+            "endDate": {
+              "fullDate": "2021-12-21",
+              "year": 2021,
+              "month": 11,
+              "date": 21
+            },
+            "timeType": "DEFAULT_PLANNED_WORK",
+            "tentative": true,
+            "startTime": {
+              "time": "13:00",
+              "hours": 13,
+              "minutes": 0
+            },
+            "endTime": {
+              "time": "19:00",
+              "hours": 19,
+              "minutes": 0
+            },
+            "duration": 360,
+            "breaks": [],
+            "breaksToBeDeleted": [],
+            "dayBreaks": [],
+            "dayBreaksPrev": [],
+            "allBreaks": [],
+            "nightShift": false,
+            "isTimeTrackingNightShift": false,
+            "workScheduleDay": "2"
+          },
+          {
+            "externalCode": "c0840a9e-e62d-12d4-d544-aea4e8d4d202",
+            "userId": "1",
+            "startDate": {
+              "fullDate": "2021-12-22",
+              "year": 2021,
+              "month": 11,
+              "date": 22
+            },
+            "endDate": {
+              "fullDate": "2021-12-22",
+              "year": 2021,
+              "month": 11,
+              "date": 22
+            },
+            "timeType": "DEFAULT_PLANNED_WORK",
+            "tentative": true,
+            "startTime": {
+              "time": "13:00",
+              "hours": 13,
+              "minutes": 0
+            },
+            "endTime": {
+              "time": "19:00",
+              "hours": 19,
+              "minutes": 0
+            },
+            "duration": 360,
+            "breaks": [],
+            "breaksToBeDeleted": [],
+            "dayBreaks": [],
+            "dayBreaksPrev": [],
+            "allBreaks": [],
+            "nightShift": false,
+            "isTimeTrackingNightShift": false,
+            "workScheduleDay": "3"
+          },
+          {
+            "externalCode": "993bcf34-ecec-b4be-8842-c5499890406d",
+            "userId": "1",
+            "startDate": {
+              "fullDate": "2021-12-23",
+              "year": 2021,
+              "month": 11,
+              "date": 23
+            },
+            "endDate": {
+              "fullDate": "2021-12-23",
+              "year": 2021,
+              "month": 11,
+              "date": 23
+            },
+            "timeType": "DEFAULT_PLANNED_WORK",
+            "tentative": true,
+            "startTime": {
+              "time": "13:00",
+              "hours": 13,
+              "minutes": 0
+            },
+            "endTime": {
+              "time": "19:00",
+              "hours": 19,
+              "minutes": 0
+            },
+            "duration": 360,
+            "breaks": [],
+            "breaksToBeDeleted": [],
+            "dayBreaks": [],
+            "dayBreaksPrev": [],
+            "allBreaks": [],
+            "nightShift": false,
+            "isTimeTrackingNightShift": false,
+            "workScheduleDay": "4"
+          },
+          {
+            "externalCode": "0afe23c6-b728-f7a0-dd2a-6f6e0f9a7918",
+            "userId": "1",
+            "startDate": {
+              "fullDate": "2021-12-24",
+              "year": 2021,
+              "month": 11,
+              "date": 24
+            },
+            "endDate": {
+              "fullDate": "2021-12-24",
+              "year": 2021,
+              "month": 11,
+              "date": 24
+            },
+            "timeType": "DEFAULT_PLANNED_WORK",
+            "tentative": true,
+            "startTime": {
+              "time": "13:00",
+              "hours": 13,
+              "minutes": 0
+            },
+            "endTime": {
+              "time": "19:00",
+              "hours": 19,
+              "minutes": 0
+            },
+            "duration": 360,
+            "breaks": [],
+            "breaksToBeDeleted": [],
+            "dayBreaks": [],
+            "dayBreaksPrev": [],
+            "allBreaks": [],
+            "nightShift": false,
+            "isTimeTrackingNightShift": false,
+            "workScheduleDay": "5"
+          },
+          {
+            "externalCode": "96b647ef-4891-f2a0-00a3-93465e3f95f9",
+            "userId": "1",
+            "startDate": {
+              "fullDate": "2021-12-25",
+              "year": 2021,
+              "month": 11,
+              "date": 25
+            },
+            "endDate": {
+              "fullDate": "2021-12-25",
+              "year": 2021,
+              "month": 11,
+              "date": 25
+            },
+            "timeType": "DEFAULT_PLANNED_WORK",
+            "tentative": true,
+            "startTime": {
+              "time": "13:00",
+              "hours": 13,
+              "minutes": 0
+            },
+            "endTime": {
+              "time": "19:00",
+              "hours": 19,
+              "minutes": 0
+            },
+            "duration": 360,
+            "breaks": [],
+            "breaksToBeDeleted": [],
+            "dayBreaks": [],
+            "dayBreaksPrev": [],
+            "allBreaks": [],
+            "nightShift": false,
+            "isTimeTrackingNightShift": false,
+            "workScheduleDay": "6"
+          },
+          {
+            "externalCode": "d1164f5d-ee6c-75f5-675d-d0a75d6dd855",
+            "userId": "1",
+            "startDate": {
+              "fullDate": "2021-12-28",
+              "year": 2021,
+              "month": 11,
+              "date": 28
+            },
+            "endDate": {
+              "fullDate": "2021-12-28",
+              "year": 2021,
+              "month": 11,
+              "date": 28
+            },
+            "timeType": "DEFAULT_PLANNED_WORK",
+            "tentative": true,
+            "startTime": {
+              "time": "13:00",
+              "hours": 13,
+              "minutes": 0
+            },
+            "endTime": {
+              "time": "19:00",
+              "hours": 19,
+              "minutes": 0
+            },
+            "duration": 360,
+            "breaks": [],
+            "breaksToBeDeleted": [],
+            "dayBreaks": [],
+            "dayBreaksPrev": [],
+            "allBreaks": [],
+            "nightShift": false,
+            "isTimeTrackingNightShift": false,
+            "workScheduleExternalCode": "5115a9bcb2",
+            "workScheduleDay": "2",
+            "tags": null
+          },
+          {
+            "externalCode": "132aa0b1-f8f3-1376-5cf7-28880ac3c7f9",
+            "userId": "1",
+            "startDate": {
+              "fullDate": "2021-12-29",
+              "year": 2021,
+              "month": 11,
+              "date": 29
+            },
+            "endDate": {
+              "fullDate": "2021-12-29",
+              "year": 2021,
+              "month": 11,
+              "date": 29
+            },
+            "timeType": "DEFAULT_PLANNED_WORK",
+            "tentative": true,
+            "startTime": {
+              "time": "13:00",
+              "hours": 13,
+              "minutes": 0
+            },
+            "endTime": {
+              "time": "19:00",
+              "hours": 19,
+              "minutes": 0
+            },
+            "duration": 360,
+            "breaks": [],
+            "breaksToBeDeleted": [],
+            "dayBreaks": [],
+            "dayBreaksPrev": [],
+            "allBreaks": [],
+            "nightShift": false,
+            "isTimeTrackingNightShift": false,
+            "workScheduleExternalCode": "5115a9bcb2",
+            "workScheduleDay": "3",
+            "tags": null
+          },
+          {
+            "externalCode": "58bc40fe-f8a1-9b8b-efbf-795a41150246",
+            "userId": "1",
+            "startDate": {
+              "fullDate": "2021-12-30",
+              "year": 2021,
+              "month": 11,
+              "date": 30
+            },
+            "endDate": {
+              "fullDate": "2021-12-30",
+              "year": 2021,
+              "month": 11,
+              "date": 30
+            },
+            "timeType": "DEFAULT_PLANNED_WORK",
+            "tentative": true,
+            "startTime": {
+              "time": "13:00",
+              "hours": 13,
+              "minutes": 0
+            },
+            "endTime": {
+              "time": "19:00",
+              "hours": 19,
+              "minutes": 0
+            },
+            "duration": 360,
+            "breaks": [],
+            "breaksToBeDeleted": [],
+            "dayBreaks": [],
+            "dayBreaksPrev": [],
+            "allBreaks": [],
+            "nightShift": false,
+            "isTimeTrackingNightShift": false,
+            "workScheduleExternalCode": "5115a9bcb2",
+            "workScheduleDay": "4",
+            "tags": null
+          },
+          {
+            "externalCode": "5189b1b5-a9d9-4fc6-535b-6b8e4ede9557",
+            "userId": "1",
+            "startDate": {
+              "fullDate": "2021-12-31",
+              "year": 2021,
+              "month": 11,
+              "date": 31
+            },
+            "endDate": {
+              "fullDate": "2021-12-31",
+              "year": 2021,
+              "month": 11,
+              "date": 31
+            },
+            "timeType": "DEFAULT_PLANNED_WORK",
+            "tentative": true,
+            "startTime": {
+              "time": "13:00",
+              "hours": 13,
+              "minutes": 0
+            },
+            "endTime": {
+              "time": "19:00",
+              "hours": 19,
+              "minutes": 0
+            },
+            "duration": 360,
+            "breaks": [],
+            "breaksToBeDeleted": [],
+            "dayBreaks": [],
+            "dayBreaksPrev": [],
+            "allBreaks": [],
+            "nightShift": false,
+            "isTimeTrackingNightShift": false,
+            "workScheduleExternalCode": "5115a9bcb2",
+            "workScheduleDay": "5",
+            "tags": null
+          },
+          {
+            "externalCode": "63010ee4-2ccb-56c2-86e5-14fef86878c9",
+            "userId": "1",
+            "startDate": {
+              "fullDate": "2022-1-3",
+              "year": 2022,
+              "month": 0,
+              "date": 3
+            },
+            "endDate": {
+              "fullDate": "2022-1-3",
+              "year": 2022,
+              "month": 0,
+              "date": 3
+            },
+            "timeType": "DEFAULT_PLANNED_WORK",
+            "tentative": true,
+            "startTime": {
+              "time": "13:00",
+              "hours": 13,
+              "minutes": 0
+            },
+            "endTime": {
+              "time": "19:00",
+              "hours": 19,
+              "minutes": 0
+            },
+            "duration": 360,
+            "breaks": [],
+            "breaksToBeDeleted": [],
+            "dayBreaks": [],
+            "dayBreaksPrev": [],
+            "allBreaks": [],
+            "nightShift": false,
+            "isTimeTrackingNightShift": false,
+            "workScheduleExternalCode": "f9e0dfe428",
+            "workScheduleDay": "1",
+            "tags": null
+          },
+          {
+            "externalCode": "e5d9641d-80cb-037e-a8c6-1a1db2f8120d",
+            "userId": "1",
+            "startDate": {
+              "fullDate": "2022-1-4",
+              "year": 2022,
+              "month": 0,
+              "date": 4
+            },
+            "endDate": {
+              "fullDate": "2022-1-4",
+              "year": 2022,
+              "month": 0,
+              "date": 4
+            },
+            "timeType": "DEFAULT_PLANNED_WORK",
+            "tentative": true,
+            "startTime": {
+              "time": "13:00",
+              "hours": 13,
+              "minutes": 0
+            },
+            "endTime": {
+              "time": "19:00",
+              "hours": 19,
+              "minutes": 0
+            },
+            "duration": 360,
+            "breaks": [],
+            "breaksToBeDeleted": [],
+            "dayBreaks": [],
+            "dayBreaksPrev": [],
+            "allBreaks": [],
+            "nightShift": false,
+            "isTimeTrackingNightShift": false,
+            "workScheduleExternalCode": "f9e0dfe428",
+            "workScheduleDay": "2",
+            "tags": null
+          },
+          {
+            "externalCode": "aa0856ca-2709-612c-69b6-996c8c089d48",
+            "userId": "1",
+            "startDate": {
+              "fullDate": "2022-1-5",
+              "year": 2022,
+              "month": 0,
+              "date": 5
+            },
+            "endDate": {
+              "fullDate": "2022-1-5",
+              "year": 2022,
+              "month": 0,
+              "date": 5
+            },
+            "timeType": "DEFAULT_PLANNED_WORK",
+            "tentative": true,
+            "startTime": {
+              "time": "13:00",
+              "hours": 13,
+              "minutes": 0
+            },
+            "endTime": {
+              "time": "19:00",
+              "hours": 19,
+              "minutes": 0
+            },
+            "duration": 360,
+            "breaks": [],
+            "breaksToBeDeleted": [],
+            "dayBreaks": [],
+            "dayBreaksPrev": [],
+            "allBreaks": [],
+            "nightShift": false,
+            "isTimeTrackingNightShift": false,
+            "workScheduleExternalCode": "f9e0dfe428",
+            "workScheduleDay": "3",
+            "tags": null
+          },
+          {
+            "externalCode": "4711cb9f-3d0d-466b-6c7c-368a6801481b",
+            "userId": "1",
+            "startDate": {
+              "fullDate": "2022-1-6",
+              "year": 2022,
+              "month": 0,
+              "date": 6
+            },
+            "endDate": {
+              "fullDate": "2022-1-6",
+              "year": 2022,
+              "month": 0,
+              "date": 6
+            },
+            "timeType": "DEFAULT_PLANNED_WORK",
+            "tentative": true,
+            "startTime": {
+              "time": "13:00",
+              "hours": 13,
+              "minutes": 0
+            },
+            "endTime": {
+              "time": "19:00",
+              "hours": 19,
+              "minutes": 0
+            },
+            "duration": 360,
+            "breaks": [],
+            "breaksToBeDeleted": [],
+            "dayBreaks": [],
+            "dayBreaksPrev": [],
+            "allBreaks": [],
+            "nightShift": false,
+            "isTimeTrackingNightShift": false,
+            "workScheduleExternalCode": "f9e0dfe428",
+            "workScheduleDay": "4",
+            "tags": null
+          },
+          {
+            "externalCode": "ad2d8a51-4337-0df8-7f99-7ad501d19250",
+            "userId": "1",
+            "startDate": {
+              "fullDate": "2022-1-7",
+              "year": 2022,
+              "month": 0,
+              "date": 7
+            },
+            "endDate": {
+              "fullDate": "2022-1-7",
+              "year": 2022,
+              "month": 0,
+              "date": 7
+            },
+            "timeType": "DEFAULT_PLANNED_WORK",
+            "tentative": true,
+            "startTime": {
+              "time": "13:00",
+              "hours": 13,
+              "minutes": 0
+            },
+            "endTime": {
+              "time": "19:00",
+              "hours": 19,
+              "minutes": 0
+            },
+            "duration": 360,
+            "breaks": [],
+            "breaksToBeDeleted": [],
+            "dayBreaks": [],
+            "dayBreaksPrev": [],
+            "allBreaks": [],
+            "nightShift": false,
+            "isTimeTrackingNightShift": false,
+            "workScheduleExternalCode": "f9e0dfe428",
+            "workScheduleDay": "5",
+            "tags": null
+          },
+          {
+            "externalCode": "2738bc24-99ab-c329-a670-80a1fc00e0b5",
+            "userId": "1",
+            "startDate": {
+              "fullDate": "2022-1-10",
+              "year": 2022,
+              "month": 0,
+              "date": 10
+            },
+            "endDate": {
+              "fullDate": "2022-1-10",
+              "year": 2022,
+              "month": 0,
+              "date": 10
+            },
+            "timeType": "DEFAULT_PLANNED_WORK",
+            "tentative": true,
+            "startTime": {
+              "time": "10:00",
+              "hours": 10,
+              "minutes": 0
+            },
+            "endTime": {
+              "time": "19:00",
+              "hours": 19,
+              "minutes": 0
+            },
+            "duration": 480,
+            "breaks": [
+              {
+                "__metadata": {
+                  "uri": "https://apisalesdemo4.successfactors.com:443/odata/v2/WorkScheduleDayModelAssignmentSegment(WorkScheduleDayModelAssignment_day=1L,WorkSchedule_externalCode='aa93be45af',externalCode='2')",
+                  "type": "SFOData.WorkScheduleDayModelAssignmentSegment"
+                },
+                "WorkScheduleDayModelAssignment_day": "1",
+                "externalCode": "2",
+                "WorkSchedule_externalCode": "aa93be45af",
+                "duration": "60",
+                "startTime": {
+                  "time": "14:00",
+                  "hours": 14,
+                  "minutes": 0
+                },
+                "endTime": {
+                  "time": "15:00",
+                  "hours": 15,
+                  "minutes": 0
+                },
+                "category": "SCHEDULED_UNPAID_BREAK"
+              }
+            ],
+            "breaksToBeDeleted": [],
+            "dayBreaks": [],
+            "dayBreaksPrev": [],
+            "allBreaks": [
+              {
+                "__metadata": {
+                  "uri": "https://apisalesdemo4.successfactors.com:443/odata/v2/WorkScheduleDayModelAssignmentSegment(WorkScheduleDayModelAssignment_day=1L,WorkSchedule_externalCode='aa93be45af',externalCode='2')",
+                  "type": "SFOData.WorkScheduleDayModelAssignmentSegment"
+                },
+                "WorkScheduleDayModelAssignment_day": "1",
+                "externalCode": "2",
+                "WorkSchedule_externalCode": "aa93be45af",
+                "duration": "60",
+                "startTime": {
+                  "time": "14:00",
+                  "hours": 14,
+                  "minutes": 0
+                },
+                "endTime": {
+                  "time": "15:00",
+                  "hours": 15,
+                  "minutes": 0
+                },
+                "category": "SCHEDULED_UNPAID_BREAK"
+              }
+            ],
+            "nightShift": false,
+            "isTimeTrackingNightShift": false,
+            "workScheduleExternalCode": "aa93be45af",
+            "workScheduleDay": "1",
+            "tags": null
+          },
+          {
+            "externalCode": "01d064cf-7047-00be-8dd9-427007d6aad2",
+            "userId": "1",
+            "startDate": {
+              "fullDate": "2022-1-11",
+              "year": 2022,
+              "month": 0,
+              "date": 11
+            },
+            "endDate": {
+              "fullDate": "2022-1-11",
+              "year": 2022,
+              "month": 0,
+              "date": 11
+            },
+            "timeType": "DEFAULT_PLANNED_WORK",
+            "tentative": true,
+            "startTime": {
+              "time": "10:00",
+              "hours": 10,
+              "minutes": 0
+            },
+            "endTime": {
+              "time": "19:00",
+              "hours": 19,
+              "minutes": 0
+            },
+            "duration": 480,
+            "breaks": [
+              {
+                "__metadata": {
+                  "uri": "https://apisalesdemo4.successfactors.com:443/odata/v2/WorkScheduleDayModelAssignmentSegment(WorkScheduleDayModelAssignment_day=2L,WorkSchedule_externalCode='aa93be45af',externalCode='2')",
+                  "type": "SFOData.WorkScheduleDayModelAssignmentSegment"
+                },
+                "WorkScheduleDayModelAssignment_day": "2",
+                "externalCode": "2",
+                "WorkSchedule_externalCode": "aa93be45af",
+                "duration": "60",
+                "startTime": {
+                  "time": "14:00",
+                  "hours": 14,
+                  "minutes": 0
+                },
+                "endTime": {
+                  "time": "15:00",
+                  "hours": 15,
+                  "minutes": 0
+                },
+                "category": "SCHEDULED_UNPAID_BREAK"
+              }
+            ],
+            "breaksToBeDeleted": [],
+            "dayBreaks": [],
+            "dayBreaksPrev": [],
+            "allBreaks": [
+              {
+                "__metadata": {
+                  "uri": "https://apisalesdemo4.successfactors.com:443/odata/v2/WorkScheduleDayModelAssignmentSegment(WorkScheduleDayModelAssignment_day=2L,WorkSchedule_externalCode='aa93be45af',externalCode='2')",
+                  "type": "SFOData.WorkScheduleDayModelAssignmentSegment"
+                },
+                "WorkScheduleDayModelAssignment_day": "2",
+                "externalCode": "2",
+                "WorkSchedule_externalCode": "aa93be45af",
+                "duration": "60",
+                "startTime": {
+                  "time": "14:00",
+                  "hours": 14,
+                  "minutes": 0
+                },
+                "endTime": {
+                  "time": "15:00",
+                  "hours": 15,
+                  "minutes": 0
+                },
+                "category": "SCHEDULED_UNPAID_BREAK"
+              }
+            ],
+            "nightShift": false,
+            "isTimeTrackingNightShift": false,
+            "workScheduleExternalCode": "aa93be45af",
+            "workScheduleDay": "2",
+            "tags": null
+          },
+          {
+            "externalCode": "20751d41-f83f-5de9-0753-c2ca0a7741b2",
+            "userId": "1",
+            "startDate": {
+              "fullDate": "2022-1-12",
+              "year": 2022,
+              "month": 0,
+              "date": 12
+            },
+            "endDate": {
+              "fullDate": "2022-1-12",
+              "year": 2022,
+              "month": 0,
+              "date": 12
+            },
+            "timeType": "DEFAULT_PLANNED_WORK",
+            "tentative": true,
+            "startTime": {
+              "time": "10:00",
+              "hours": 10,
+              "minutes": 0
+            },
+            "endTime": {
+              "time": "19:00",
+              "hours": 19,
+              "minutes": 0
+            },
+            "duration": 480,
+            "breaks": [
+              {
+                "__metadata": {
+                  "uri": "https://apisalesdemo4.successfactors.com:443/odata/v2/WorkScheduleDayModelAssignmentSegment(WorkScheduleDayModelAssignment_day=3L,WorkSchedule_externalCode='aa93be45af',externalCode='2')",
+                  "type": "SFOData.WorkScheduleDayModelAssignmentSegment"
+                },
+                "WorkScheduleDayModelAssignment_day": "3",
+                "externalCode": "2",
+                "WorkSchedule_externalCode": "aa93be45af",
+                "duration": "60",
+                "startTime": {
+                  "time": "14:00",
+                  "hours": 14,
+                  "minutes": 0
+                },
+                "endTime": {
+                  "time": "15:00",
+                  "hours": 15,
+                  "minutes": 0
+                },
+                "category": "SCHEDULED_UNPAID_BREAK"
+              }
+            ],
+            "breaksToBeDeleted": [],
+            "dayBreaks": [],
+            "dayBreaksPrev": [],
+            "allBreaks": [
+              {
+                "__metadata": {
+                  "uri": "https://apisalesdemo4.successfactors.com:443/odata/v2/WorkScheduleDayModelAssignmentSegment(WorkScheduleDayModelAssignment_day=3L,WorkSchedule_externalCode='aa93be45af',externalCode='2')",
+                  "type": "SFOData.WorkScheduleDayModelAssignmentSegment"
+                },
+                "WorkScheduleDayModelAssignment_day": "3",
+                "externalCode": "2",
+                "WorkSchedule_externalCode": "aa93be45af",
+                "duration": "60",
+                "startTime": {
+                  "time": "14:00",
+                  "hours": 14,
+                  "minutes": 0
+                },
+                "endTime": {
+                  "time": "15:00",
+                  "hours": 15,
+                  "minutes": 0
+                },
+                "category": "SCHEDULED_UNPAID_BREAK"
+              }
+            ],
+            "nightShift": false,
+            "isTimeTrackingNightShift": false,
+            "workScheduleExternalCode": "aa93be45af",
+            "workScheduleDay": "3",
+            "tags": "WFH"
+          },
+          {
+            "externalCode": "d4e0e1d7-1e14-ed26-4ae3-8c806f8d9654",
+            "userId": "1",
+            "startDate": {
+              "fullDate": "2022-1-13",
+              "year": 2022,
+              "month": 0,
+              "date": 13
+            },
+            "endDate": {
+              "fullDate": "2022-1-13",
+              "year": 2022,
+              "month": 0,
+              "date": 13
+            },
+            "timeType": "DEFAULT_PLANNED_WORK",
+            "tentative": true,
+            "startTime": {
+              "time": "10:00",
+              "hours": 10,
+              "minutes": 0
+            },
+            "endTime": {
+              "time": "19:00",
+              "hours": 19,
+              "minutes": 0
+            },
+            "duration": 480,
+            "breaks": [
+              {
+                "__metadata": {
+                  "uri": "https://apisalesdemo4.successfactors.com:443/odata/v2/WorkScheduleDayModelAssignmentSegment(WorkScheduleDayModelAssignment_day=4L,WorkSchedule_externalCode='aa93be45af',externalCode='2')",
+                  "type": "SFOData.WorkScheduleDayModelAssignmentSegment"
+                },
+                "WorkScheduleDayModelAssignment_day": "4",
+                "externalCode": "2",
+                "WorkSchedule_externalCode": "aa93be45af",
+                "duration": "60",
+                "startTime": {
+                  "time": "14:00",
+                  "hours": 14,
+                  "minutes": 0
+                },
+                "endTime": {
+                  "time": "15:00",
+                  "hours": 15,
+                  "minutes": 0
+                },
+                "category": "SCHEDULED_UNPAID_BREAK"
+              }
+            ],
+            "breaksToBeDeleted": [],
+            "dayBreaks": [],
+            "dayBreaksPrev": [],
+            "allBreaks": [
+              {
+                "__metadata": {
+                  "uri": "https://apisalesdemo4.successfactors.com:443/odata/v2/WorkScheduleDayModelAssignmentSegment(WorkScheduleDayModelAssignment_day=4L,WorkSchedule_externalCode='aa93be45af',externalCode='2')",
+                  "type": "SFOData.WorkScheduleDayModelAssignmentSegment"
+                },
+                "WorkScheduleDayModelAssignment_day": "4",
+                "externalCode": "2",
+                "WorkSchedule_externalCode": "aa93be45af",
+                "duration": "60",
+                "startTime": {
+                  "time": "14:00",
+                  "hours": 14,
+                  "minutes": 0
+                },
+                "endTime": {
+                  "time": "15:00",
+                  "hours": 15,
+                  "minutes": 0
+                },
+                "category": "SCHEDULED_UNPAID_BREAK"
+              }
+            ],
+            "nightShift": false,
+            "isTimeTrackingNightShift": false,
+            "workScheduleExternalCode": "aa93be45af",
+            "workScheduleDay": "4",
+            "tags": null
+          },
+          {
+            "externalCode": "a60f0d3c-2b6e-181e-02a5-b949cd36b5c4",
+            "userId": "1",
+            "startDate": {
+              "fullDate": "2022-1-14",
+              "year": 2022,
+              "month": 0,
+              "date": 14
+            },
+            "endDate": {
+              "fullDate": "2022-1-14",
+              "year": 2022,
+              "month": 0,
+              "date": 14
+            },
+            "timeType": "DEFAULT_PLANNED_WORK",
+            "tentative": true,
+            "startTime": {
+              "time": "10:00",
+              "hours": 10,
+              "minutes": 0
+            },
+            "endTime": {
+              "time": "19:00",
+              "hours": 19,
+              "minutes": 0
+            },
+            "duration": 480,
+            "breaks": [
+              {
+                "__metadata": {
+                  "uri": "https://apisalesdemo4.successfactors.com:443/odata/v2/WorkScheduleDayModelAssignmentSegment(WorkScheduleDayModelAssignment_day=5L,WorkSchedule_externalCode='aa93be45af',externalCode='2')",
+                  "type": "SFOData.WorkScheduleDayModelAssignmentSegment"
+                },
+                "WorkScheduleDayModelAssignment_day": "5",
+                "externalCode": "2",
+                "WorkSchedule_externalCode": "aa93be45af",
+                "duration": "60",
+                "startTime": {
+                  "time": "14:00",
+                  "hours": 14,
+                  "minutes": 0
+                },
+                "endTime": {
+                  "time": "15:00",
+                  "hours": 15,
+                  "minutes": 0
+                },
+                "category": "SCHEDULED_UNPAID_BREAK"
+              }
+            ],
+            "breaksToBeDeleted": [],
+            "dayBreaks": [],
+            "dayBreaksPrev": [],
+            "allBreaks": [
+              {
+                "__metadata": {
+                  "uri": "https://apisalesdemo4.successfactors.com:443/odata/v2/WorkScheduleDayModelAssignmentSegment(WorkScheduleDayModelAssignment_day=5L,WorkSchedule_externalCode='aa93be45af',externalCode='2')",
+                  "type": "SFOData.WorkScheduleDayModelAssignmentSegment"
+                },
+                "WorkScheduleDayModelAssignment_day": "5",
+                "externalCode": "2",
+                "WorkSchedule_externalCode": "aa93be45af",
+                "duration": "60",
+                "startTime": {
+                  "time": "14:00",
+                  "hours": 14,
+                  "minutes": 0
+                },
+                "endTime": {
+                  "time": "15:00",
+                  "hours": 15,
+                  "minutes": 0
+                },
+                "category": "SCHEDULED_UNPAID_BREAK"
+              }
+            ],
+            "nightShift": false,
+            "isTimeTrackingNightShift": false,
+            "workScheduleExternalCode": "aa93be45af",
+            "workScheduleDay": "5",
+            "tags": null
+          },
+          {
+            "externalCode": "1061bbcd-ed2d-6a2e-0602-b323b448512c",
+            "userId": "1",
+            "startDate": {
+              "fullDate": "2022-1-15",
+              "year": 2022,
+              "month": 0,
+              "date": 15
+            },
+            "endDate": {
+              "fullDate": "2022-1-15",
+              "year": 2022,
+              "month": 0,
+              "date": 15
+            },
+            "timeType": "DEFAULT_PLANNED_WORK",
+            "tentative": true,
+            "startTime": {
+              "time": "10:00",
+              "hours": 10,
+              "minutes": 0
+            },
+            "endTime": {
+              "time": "19:00",
+              "hours": 19,
+              "minutes": 0
+            },
+            "duration": 480,
+            "breaks": [
+              {
+                "__metadata": {
+                  "uri": "https://apisalesdemo4.successfactors.com:443/odata/v2/WorkScheduleDayModelAssignmentSegment(WorkScheduleDayModelAssignment_day=6L,WorkSchedule_externalCode='aa93be45af',externalCode='2')",
+                  "type": "SFOData.WorkScheduleDayModelAssignmentSegment"
+                },
+                "WorkScheduleDayModelAssignment_day": "6",
+                "externalCode": "2",
+                "WorkSchedule_externalCode": "aa93be45af",
+                "duration": "60",
+                "startTime": {
+                  "time": "14:00",
+                  "hours": 14,
+                  "minutes": 0
+                },
+                "endTime": {
+                  "time": "15:00",
+                  "hours": 15,
+                  "minutes": 0
+                },
+                "category": "SCHEDULED_UNPAID_BREAK"
+              }
+            ],
+            "breaksToBeDeleted": [],
+            "dayBreaks": [],
+            "dayBreaksPrev": [],
+            "allBreaks": [
+              {
+                "__metadata": {
+                  "uri": "https://apisalesdemo4.successfactors.com:443/odata/v2/WorkScheduleDayModelAssignmentSegment(WorkScheduleDayModelAssignment_day=6L,WorkSchedule_externalCode='aa93be45af',externalCode='2')",
+                  "type": "SFOData.WorkScheduleDayModelAssignmentSegment"
+                },
+                "WorkScheduleDayModelAssignment_day": "6",
+                "externalCode": "2",
+                "WorkSchedule_externalCode": "aa93be45af",
+                "duration": "60",
+                "startTime": {
+                  "time": "14:00",
+                  "hours": 14,
+                  "minutes": 0
+                },
+                "endTime": {
+                  "time": "15:00",
+                  "hours": 15,
+                  "minutes": 0
+                },
+                "category": "SCHEDULED_UNPAID_BREAK"
+              }
+            ],
+            "nightShift": false,
+            "isTimeTrackingNightShift": false,
+            "workScheduleExternalCode": "aa93be45af",
+            "workScheduleDay": "6",
+            "tags": null
+          },
+          {
+            "externalCode": "61312dc7-e8ee-3ca1-85b8-0ec71af9c347",
+            "userId": "1",
+            "startDate": {
+              "fullDate": "2022-1-17",
+              "year": 2022,
+              "month": 0,
+              "date": 17
+            },
+            "endDate": {
+              "fullDate": "2022-1-17",
+              "year": 2022,
+              "month": 0,
+              "date": 17
+            },
+            "timeType": "DEFAULT_PLANNED_WORK",
+            "tentative": true,
+            "startTime": {
+              "time": "13:00",
+              "hours": 13,
+              "minutes": 0
+            },
+            "endTime": {
+              "time": "19:00",
+              "hours": 19,
+              "minutes": 0
+            },
+            "duration": 360,
+            "breaks": [],
+            "breaksToBeDeleted": [],
+            "dayBreaks": [],
+            "dayBreaksPrev": [],
+            "allBreaks": [],
+            "nightShift": false,
+            "isTimeTrackingNightShift": false,
+            "workScheduleExternalCode": "2aeb76bb85",
+            "workScheduleDay": "1",
+            "tags": null
+          },
+          {
+            "externalCode": "066bd681-6450-c775-0bd7-9a93d693b5c1",
+            "userId": "1",
+            "startDate": {
+              "fullDate": "2022-1-18",
+              "year": 2022,
+              "month": 0,
+              "date": 18
+            },
+            "endDate": {
+              "fullDate": "2022-1-18",
+              "year": 2022,
+              "month": 0,
+              "date": 18
+            },
+            "timeType": "DEFAULT_PLANNED_WORK",
+            "tentative": true,
+            "startTime": {
+              "time": "13:00",
+              "hours": 13,
+              "minutes": 0
+            },
+            "endTime": {
+              "time": "19:00",
+              "hours": 19,
+              "minutes": 0
+            },
+            "duration": 360,
+            "breaks": [],
+            "breaksToBeDeleted": [],
+            "dayBreaks": [],
+            "dayBreaksPrev": [],
+            "allBreaks": [],
+            "nightShift": false,
+            "isTimeTrackingNightShift": false,
+            "workScheduleExternalCode": "2aeb76bb85",
+            "workScheduleDay": "2",
+            "tags": null
+          },
+          {
+            "externalCode": "8c9e8d09-1de2-2324-53f0-54691256be04",
+            "userId": "1",
+            "startDate": {
+              "fullDate": "2022-1-19",
+              "year": 2022,
+              "month": 0,
+              "date": 19
+            },
+            "endDate": {
+              "fullDate": "2022-1-19",
+              "year": 2022,
+              "month": 0,
+              "date": 19
+            },
+            "timeType": "DEFAULT_PLANNED_WORK",
+            "tentative": true,
+            "startTime": {
+              "time": "13:00",
+              "hours": 13,
+              "minutes": 0
+            },
+            "endTime": {
+              "time": "19:00",
+              "hours": 19,
+              "minutes": 0
+            },
+            "duration": 360,
+            "breaks": [],
+            "breaksToBeDeleted": [],
+            "dayBreaks": [],
+            "dayBreaksPrev": [],
+            "allBreaks": [],
+            "nightShift": false,
+            "isTimeTrackingNightShift": false,
+            "workScheduleExternalCode": "2aeb76bb85",
+            "workScheduleDay": "3",
+            "tags": null
+          },
+          {
+            "externalCode": "cb20f794-7ed3-54f3-0f6d-76794374cd37",
+            "userId": "1",
+            "startDate": {
+              "fullDate": "2022-1-20",
+              "year": 2022,
+              "month": 0,
+              "date": 20
+            },
+            "endDate": {
+              "fullDate": "2022-1-20",
+              "year": 2022,
+              "month": 0,
+              "date": 20
+            },
+            "timeType": "DEFAULT_PLANNED_WORK",
+            "tentative": true,
+            "startTime": {
+              "time": "13:00",
+              "hours": 13,
+              "minutes": 0
+            },
+            "endTime": {
+              "time": "19:00",
+              "hours": 19,
+              "minutes": 0
+            },
+            "duration": 360,
+            "breaks": [],
+            "breaksToBeDeleted": [],
+            "dayBreaks": [],
+            "dayBreaksPrev": [],
+            "allBreaks": [],
+            "nightShift": false,
+            "isTimeTrackingNightShift": false,
+            "workScheduleExternalCode": "2aeb76bb85",
+            "workScheduleDay": "4",
+            "tags": null
+          },
+          {
+            "externalCode": "8d2a6785-53c6-89e4-0d0b-82b3b0d50501",
+            "userId": "1",
+            "startDate": {
+              "fullDate": "2022-1-21",
+              "year": 2022,
+              "month": 0,
+              "date": 21
+            },
+            "endDate": {
+              "fullDate": "2022-1-21",
+              "year": 2022,
+              "month": 0,
+              "date": 21
+            },
+            "timeType": "DEFAULT_PLANNED_WORK",
+            "tentative": true,
+            "startTime": {
+              "time": "13:00",
+              "hours": 13,
+              "minutes": 0
+            },
+            "endTime": {
+              "time": "19:00",
+              "hours": 19,
+              "minutes": 0
+            },
+            "duration": 360,
+            "breaks": [],
+            "breaksToBeDeleted": [],
+            "dayBreaks": [],
+            "dayBreaksPrev": [],
+            "allBreaks": [],
+            "nightShift": false,
+            "isTimeTrackingNightShift": false,
+            "workScheduleExternalCode": "2aeb76bb85",
+            "workScheduleDay": "5",
+            "tags": null
+          }
+        ]
+      }
+    ]
+  }
