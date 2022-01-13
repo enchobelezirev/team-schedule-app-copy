@@ -5,7 +5,6 @@ from src.modules.api_mapper import *
 from src.shift_generator import ShiftGenerator
 
 app = Flask(__name__)
-app.config['CORS_HEADERS'] = 'Content-Type'
 
 shiftGenerator = ShiftGenerator()
 
