@@ -16,7 +16,7 @@ def hello():
 @app.route("/generate", methods=["POST"])
 def generate():
     schedule = map_request_to_classes(request.json)
-    shiftGenerator.create_weekly_schedule(schedule.employees, schedule.weekStart)  
+    shiftGenerator.generate_schedule(schedule.employees, schedule.weekStart, schedule.weeksAheadCount)  
 
     result = json.loads(schedule.toJson())
     return json.dumps(result)

@@ -8,5 +8,5 @@ class ShiftGenerator():
     def __init__(self):
         self.predictor = ShiftFrequencyPredictor()
 
-    def create_weekly_schedule(self, employees: List[Employee], weekStart: datetime, availableSlots = None):
-        self.predictor.create_weekly_schedule(employees, weekStart, availableSlots)
+    def generate_schedule(self, employees: List[Employee], weekStart: datetime, weeksAheadCount: int, availableSlots = None):
+        self.predictor.generate_schedule(employees, weekStart, weeksAheadCount, availableSlots)
