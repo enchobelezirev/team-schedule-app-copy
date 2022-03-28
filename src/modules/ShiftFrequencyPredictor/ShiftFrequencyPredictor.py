@@ -9,6 +9,17 @@ from src.modules.ShiftFrequencyPredictor.models.WeekShift import WeekShift
 class ShiftFrequencyPredictor:
     def __init__(self):
         pass
+        
+    '''
+    Generate the shifts for N weeks ahead.
+    '''
+    def generate_schedule(self, employees: List[Employee], weekStart: datetime, weeksAheadCount: int, availableSlots = None):
+        for i in range(weeksAheadCount):
+            for employee in employees:
+                pastAndPredictedShifts = employee.pastShifts + employee.nextWeekShifts
+                employee.nextWeekShifts += self._assign_shifts_single_employee(pastAndPredictedShifts, weekStart, employee.weeklyHours)
+
+            weekStart += timedelta(days=7)
 
     '''
     employees - list of employees to be scheduled, each containing working hors and shifts in the past 6 months
