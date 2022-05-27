@@ -77,19 +77,7 @@ pytest:
       --assert=plain
       --maxfail=10
       --strict-markers
-      --junit-xml results.xml
       --cov-config=.coveragerc
       --cov=./src ./test
-      --cov-report term:skip-covered
-      --cov-report html:coverage_report
-      --cov-report xml:coverage_report.xml
-  artifacts:
-    expire_in: 4 mos
-    reports:
-      junit: results.xml
-      cobertura: coverage_report.xml
-    paths:
-      - coverage_report
-      - coverage_report.xml
-      - results.xml
+
 
