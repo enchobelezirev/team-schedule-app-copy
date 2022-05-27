@@ -1,8 +1,8 @@
 """JSON-Encoder for module data-model."""
 import json
-from src.models.Employee import Employee
-from src.models.Shift import Shift
-from src.models.Schedule import Schedule
+from src.models.employee import Employee
+from src.models.shift import Shift
+from src.models.schedule import Schedule
 
 
 class JSONEncoder(json.JSONEncoder):

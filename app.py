@@ -1,13 +1,13 @@
 import json
 from flask import Flask, request
-from src.modules.api_mapper import *
+from src.modules.api_mapper.api_mapper import *
 
-from src.shift_generator import ShiftGenerator
-from src.models.encoders.JSONEncoder import JSONEncoder
+from src.modules.schedule_manager import ScheduleManager
+from src.models.encoders.json_encoder import JSONEncoder
 
 app = Flask(__name__)
 
-shiftGenerator = ShiftGenerator()
+shiftGenerator = ScheduleManager()
 
 @app.route("/")
 def hello():

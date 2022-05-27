@@ -1,5 +1,5 @@
 from typing import List
-from src.models.Shift import Shift
+from src.models.shift import Shift
 
 class Employee:
     def __init__(self, uid: str, weeklyHours: int, pastShifts: List[Shift]):

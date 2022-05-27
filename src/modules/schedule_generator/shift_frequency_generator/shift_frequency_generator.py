@@ -2,49 +2,52 @@ import math
 from typing import List
 from datetime import datetime, timedelta
 
-from src.models.Employee import Employee
-from src.models.Shift import Shift
-from src.modules.ShiftFrequencyPredictor.models.WeekShift import WeekShift
+from src.models.employee import Employee
+from src.models.shift import Shift
+from src.modules.schedule_generator.shift_frequency_generator.models.week_shift import WeekShift
 
-class ShiftFrequencyPredictor:
+class ShiftFrequencyGenerator:
     def __init__(self):
         pass
         
-    '''
-    Generate the shifts for N weeks ahead.
-    '''
     def generate_schedule(self, employees: List[Employee], weekStart: datetime, weeksAheadCount: int, availableSlots = None):
+        '''
+        Generate the shifts for N weeks ahead.
+        '''
         for i in range(weeksAheadCount):
-            for employee in employees:
-                pastAndPredictedShifts = employee.pastShifts + employee.nextWeekShifts
-                employee.nextWeekShifts += self._assign_shifts_single_employee(pastAndPredictedShifts, weekStart, employee.weeklyHours)
-
+            self.create_weekly_schedule(employees, weekStart)
             weekStart += timedelta(days=7)
 
-    '''
-    employees - list of employees to be scheduled, each containing working hors and shifts in the past 6 months
-    availableSlots - for this case, all slots are available. in the future we can implement functions for predefined slots
-    '''
-    def create_weekly_schedule(self, employees: List[Employee], weekStart: datetime, availableSlots = None):
+    def create_weekly_schedule(self, employees: List[Employee], week_start: datetime, available_slots = None):
+        '''
+        Create schedule for given week
+
+        Parameters:
+        ----------
+        employees: list of employees to be scheduled, each containing working hours and shifts in the past 6 months
+        week_start: week start date
+        available_slots: for this case, all slots are available. in the future we can implement functions for predefined slots
+        '''
         for employee in employees:
-            employee.nextWeekShifts = self._assign_shifts_single_employee(employee.pastShifts, weekStart, employee.weeklyHours)
+            self._assign_shifts_given_employee(employee, week_start)
 
-    '''
-    Implementation of the simples case of assigning a single employee.
-    '''
-    def _assign_shifts_single_employee(self, employeeShifts: List[Shift], weekStart: datetime, weeklyHours: int):
+    def _assign_shifts_given_employee(self, employee: Employee, weekStart: datetime):
+        '''
+        Implementation of the simples case of assigning a single employee.
+        '''
         #Here we can add any other of the ideas we discussed
-        return self._infinite_potential_idea(employeeShifts, weekStart, weeklyHours)
+        return self._infinite_potential_idea(employee, weekStart)
 
-    def _infinite_potential_idea(self, employeeShifts, weekStart: datetime, weeklyHours) -> List[Shift]:
+    def _infinite_potential_idea(self, employee: Employee, weekStart: datetime) -> List[Shift]:
         # shiftCandidates = Take all employee possible shifts 
+        employeeShifts = employee.pastShifts + employee.nextWeekShifts
         weekshiftWeights = self._get_weighted_week_shift_counts(employeeShifts, weekStart)
         weekshifts = set([weekshift for weekshift, weekshiftWeight in weekshiftWeights.items()])
         currentHours = 0
         chosenShifts = []
         
         # while current_hours < weekly_hours
-        while currentHours < weeklyHours and len(weekshiftWeights) > 0:
+        while currentHours < employee.weeklyHours and len(weekshiftWeights) > 0:
             # pick the top slot
             topWeeklyShift = next(iter(weekshiftWeights))
             topShift = Shift(weekStart + timedelta(days = topWeeklyShift.weekday, hours = topWeeklyShift.startTime), 
@@ -57,11 +60,11 @@ class ShiftFrequencyPredictor:
             # reorder the shift's preference_score (if taking times taken, it's not needed) - evalute_shift_preference()
             weekshiftWeights = { weekshift : weekshiftWeight for weekshift, weekshiftWeight in weekshiftWeights.items() if weekshift in weekshifts }
             
-        return chosenShifts
+        employee.nextWeekShifts += chosenShifts
 
     def _remove_illegal_shifts(self, chosenShifts: List[Shift], weekshiftCandidates: List[Shift], weekStart: datetime) -> List[Shift]:
         filteredShifts = weekshiftCandidates.copy()
-        newShift = chosenShifts[len(chosenShifts)-1]
+        newShift = chosenShifts[-1]
         bestShiftStart = newShift.startTime
         bestShiftEnd = newShift.endTime
         
@@ -83,6 +86,8 @@ class ShiftFrequencyPredictor:
         
         return filteredShifts
 
+
+
     def _get_weighted_week_shift_counts(self, shifts: List[WeekShift], weekStart: datetime):
         weightedWeekshifts = {}
         for shift in shifts:
@@ -93,7 +98,7 @@ class ShiftFrequencyPredictor:
 
     def _get_weighed_shift(self, weekshift: WeekShift, shifts: List[Shift], weekStart: datetime) -> float:
         #TODO implement "shift_frequency" function here
-        return sum([self._timespan_weight(weekStart - shift.startTime) for shift in shifts if weekshift.matchesShift(shift)])
+        return sum([self._timespan_weight(weekStart - shift.startTime) for shift in shifts if weekshift.matches_shift(shift)])
 
     def _timespan_weight(self, timediff):
         w = float(abs(timediff.days)) / 7.0
