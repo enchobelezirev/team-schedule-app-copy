@@ -2,7 +2,7 @@
 import json
 
 from src.models.employee import Employee
-from models.schedule1 import Schedule
+from src.models.schedule import Schedule
 from src.models.shift import Shift
 
 
