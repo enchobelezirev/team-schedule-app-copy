@@ -20,6 +20,21 @@
 
   Make sure you are inside venv first.
 
+# How to run static code analysis
+
+## Go to the main directory and activate the virtual environment
+
+## Black
+
+    python -m black --line-length=150 .
+
+## Isort
+
+    python -m isort --line-length=150 --profile black .
+
+## Flake8
+    
+    flake8 --tee --format=gl-codeclimate --max-line-length=120 --ignore=E203,E501,W503 --exclude venv,dist .
   
 ## Deployment to Azure
 1. Go to the root directory of the project

@@ -1,7 +1,8 @@
-from typing import List
 from datetime import datetime
+from typing import List
 
 from src.models.employee import Employee
+
 
 class Schedule:
     def __init__(self, managerId: str, weekStart: datetime, weeksAheadCount: int, employees: List[Employee]):
@@ -9,4 +10,3 @@ class Schedule:
         self.weekStart = weekStart
         self.weeksAheadCount = weeksAheadCount
         self.employees = employees
-

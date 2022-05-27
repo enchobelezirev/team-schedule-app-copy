@@ -1,4 +1,3 @@
-
 import unittest
 
 from src.models.encoders.json_encoder import JSONEncoder
@@ -10,6 +9,6 @@ class TestJSONEncoder(unittest.TestCase):
         encoder = JSONEncoder()
         shift = Shift(1111111, 222222, 1000)
         shift_json = encoder.default(shift)
-        self.assertEqual(shift_json['start_time'], str(1111111))
-        self.assertEqual(shift_json['end_time'], str(222222))
-        self.assertEqual(shift_json['duration'], 1000)
+        self.assertEqual(shift_json["start_time"], str(1111111))
+        self.assertEqual(shift_json["end_time"], str(222222))
+        self.assertEqual(shift_json["duration"], 1000)

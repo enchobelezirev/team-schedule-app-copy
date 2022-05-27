@@ -1,0 +1,83 @@
+image: python:3.8
+
+before_script:
+  - python --version
+  - pip install --upgrade pip
+  - pip install --no-cache-dir -r requirements.txt
+  - export PYTHONPATH="${PYTHONPATH}:./site-packages"
+
+stages:
+  - static analysis
+  - tests
+
+flake8:
+  stage: static analysis
+  rules:
+    - when: always
+  allow_failure: true
+  script:
+    - flake8
+      --tee
+      --output-file=gl-code-quality-report.json
+      --format=gl-codeclimate
+      --max-line-length=150
+      --ignore=E203,E501,W503
+      --exclude site-packages .
+  artifacts:
+    expire_in: 4 mos
+    reports:
+      codequality: gl-code-quality-report.json
+
+mypy:
+  stage: static analysis
+  rules:
+    - when: always
+  allow_failure: true
+  script:
+    - mypy
+      --follow-imports silent
+      --ignore-missing-imports
+      --junit-xml mypy.xml
+      --exclude site-packages .
+  artifacts:
+    expire_in: 4 mos
+    reports:
+      junit: mypy.xml
+
+black:
+  stage: static analysis
+  rules:
+    - when: always
+  allow_failure: true
+  script:
+    - black
+      --line-length=150
+      --check
+      --exclude site-packages .
+
+isort:
+  stage: static analysis
+  rules:
+    - when: always
+  allow_failure: true
+  script:
+    - isort
+      --line-length=150
+      --profile black
+      --check
+      --verbose
+      --skip site-packages .
+
+pytest:
+  stage: tests
+  rules:
+    - when: always
+  script:
+    - python -m pytest
+      --assert=plain
+      --maxfail=10
+      --strict-markers
+      --cov-config=.coveragerc
+      --cov=./src ./test
+
+

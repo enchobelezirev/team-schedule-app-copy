@@ -1,8 +1,9 @@
 """JSON-Encoder for module data-model."""
 import json
+
 from src.models.employee import Employee
-from src.models.shift import Shift
 from src.models.schedule import Schedule
+from src.models.shift import Shift
 
 
 class JSONEncoder(json.JSONEncoder):
@@ -39,4 +40,3 @@ class JSONEncoder(json.JSONEncoder):
             }
 
             return json_struct
-        
