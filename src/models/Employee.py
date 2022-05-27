@@ -7,3 +7,8 @@ class Employee:
         self.weeklyHours = weeklyHours
         self.pastShifts = pastShifts
         self.nextWeekShifts = []
+
+    def get_last_shift(self):
+        shifts = self.pastShifts + self.nextWeekShifts
+        shifts.sort(key=lambda x: x.endTime)
+        return shifts[-1]
