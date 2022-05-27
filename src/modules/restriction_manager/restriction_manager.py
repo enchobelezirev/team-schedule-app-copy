@@ -1,10 +1,9 @@
-
-from src.modules.utils.constants import REST_BETWEEN_SHIFTS
 from src.models.employee import Employee
 from src.models.shift import Shift
+from src.modules.utils.constants import REST_BETWEEN_SHIFTS
 
 
-class ShiftRestrictionManager():
+class ShiftRestrictionManager:
     def __init__(self):
         pass
 
@@ -24,4 +23,3 @@ class ShiftRestrictionManager():
             if shift.rest_time(next_shift) < REST_BETWEEN_SHIFTS:
                 return False
         return True
-
