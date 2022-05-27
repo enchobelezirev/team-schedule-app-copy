@@ -1,8 +1,8 @@
 from datetime import datetime
 
-from src.models.Schedule import Schedule
-from src.models.Employee import Employee
-from src.models.Shift import Shift
+from src.models.schedule import Schedule
+from src.models.employee import Employee
+from src.models.shift import Shift
 
 def map_request_to_classes(requestJson: str) -> Schedule:
     managerId = requestJson['ManagerId']

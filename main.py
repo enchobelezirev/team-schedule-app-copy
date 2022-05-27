@@ -1,16 +1,16 @@
 import json
-from models.encoders.JSONEncoder import JSONEncoder
-from src.shift_generator import ShiftGenerator
-from src.modules.api_mapper import *
+from src.models.encoders.json_encoder import JSONEncoder
+from src.modules.schedule_manager import ScheduleManager
+from src.modules.api_mapper.api_mapper import *
 
-shiftGenerator = ShiftGenerator()
+schedule_manager = ScheduleManager()
 
 def generate_sample(sample_path: str) -> str:
-    f = open(sample_path)
-    sample_json = json.load(f)
+    with open(sample_path, "r", encoding="utf-8") as file:
+        sample_json = json.load(file)
 
     schedule = map_request_to_classes(sample_json)
-    shiftGenerator.generate_schedule(schedule.employees, schedule.weekStart, 4)  
+    schedule_manager.generate_schedule(schedule.employees, schedule.weekStart, 4)  
 
     _show_pretty_schedule(schedule)
 

@@ -1,7 +1,7 @@
 from typing import List
 from datetime import datetime
 
-from src.models.Employee import Employee
+from src.models.employee import Employee
 
 class Schedule:
     def __init__(self, managerId: str, weekStart: datetime, weeksAheadCount: int, employees: List[Employee]):
