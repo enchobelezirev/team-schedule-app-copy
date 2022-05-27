@@ -35,3 +35,7 @@ class Shift:
         print(f' Start: {self.startTime}')
         print(f' End: {self.endTime}')
         print(f' Duration: {self.duration}')
+
+    def rest_time(self, shift):
+       return min((self.endTime - shift.startTime).seconds/3600, \
+       (shift.endTime - self.startTime).seconds/3600)
