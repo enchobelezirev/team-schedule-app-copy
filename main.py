@@ -1,7 +1,7 @@
 import json
 
 from src.models.encoders.json_encoder import JSONEncoder
-from src.models.schedule import Schedule
+from models.schedule1 import Schedule
 from src.modules.api_mapper.api_mapper import map_request_to_classes
 from src.modules.schedule_manager import ScheduleManager
 
