@@ -1,4 +1,26 @@
 # Team Schedule AI - API 
+## Virtual environment
+### Create virtual environment
+
+    python -m venv venv
+
+### Enter virtual environment
+
+#### Windows (powershell): 
+
+    . venv\Scripts\activate
+
+#### Unix or MacOS : 
+
+    source venv/bin/activate
+
+## Installing packages
+
+     pip install -r .\requirements.txt 
+
+  Make sure you are inside venv first.
+
+  
 ## Deployment to Azure
 1. Go to the root directory of the project
 2. Activate the venv

@@ -22,19 +22,16 @@ class Shift:
         shiftLength = self.endTime - self.startTime
         return shiftLength if shiftLength > timedelta(0) else timedelta(0)
         
-    def getMatchingTimeWithShift(self, other):
+    def __get_matching_time_with_shift(self, other):
         # if the minimum end time is before the maximum start time, then there is an intersection
         matchingTime = min([self.endTime, other.endTime]) - max([self.startTime, other.startTime])
         return max(timedelta(0), matchingTime)
     
-    def getMatchingTimeWithShifts(self, shifts):
-        totalMatchingTime = sum(map(lambda shift: self.getMatchingTimeWithShift(shift), shifts), timedelta(0))
+    def get_matching_time_with_shifts(self, shifts):
+        totalMatchingTime = sum(map(lambda shift: self.__get_matching_time_with_shift(shift), shifts), timedelta(0))
         return totalMatchingTime
     
     def display_values(self):
         print(f' Start: {self.startTime}')
         print(f' End: {self.endTime}')
         print(f' Duration: {self.duration}')
-
-    def toJson(self):
-        return '{"StartTime": "' + str(self.startTime) + '", "EndTime": "' + str(self.endTime) + '", "Duration": "' + str(self.duration) + '"}'
