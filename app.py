@@ -3,6 +3,7 @@ from flask import Flask, request
 from src.modules.api_mapper import *
 
 from src.shift_generator import ShiftGenerator
+from src.models.JSONEncoder import JSONEncoder
 
 app = Flask(__name__)
 
@@ -18,5 +19,4 @@ def generate():
     schedule = map_request_to_classes(request.json)
     shiftGenerator.generate_schedule(schedule.employees, schedule.weekStart, schedule.weeksAheadCount)  
 
-    result = json.loads(schedule.toJson())
-    return json.dumps(result)
+    return json.dumps(schedule, cls=JSONEncoder)

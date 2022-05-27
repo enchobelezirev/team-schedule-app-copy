@@ -7,17 +7,3 @@ class Employee:
         self.weeklyHours = weeklyHours
         self.pastShifts = pastShifts
         self.nextWeekShifts = []
-
-    def toJson(self):
-        result = '{'
-        result += f'"UserId": "{self.uid}",'
-        result += '"NextWeekShifts": ['
-
-        shift_jsons = []
-        for shift in self.nextWeekShifts:
-            shift_jsons.append(shift.toJson())
-        result += ','.join(shift_jsons)
-
-        result += ']}'
-            
-        return result

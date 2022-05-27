@@ -10,16 +10,3 @@ class Schedule:
         self.weeksAheadCount = weeksAheadCount
         self.employees = employees
 
-    def toJson(self):
-        result = '{'
-        result += f'"ManagerId": "{self.managerId}",'
-        result += '"Employees": ['
-
-        employees_jsons = []
-        for employee in self.employees:
-            employees_jsons.append(employee.toJson())
-        result += ','.join(employees_jsons)
-
-        result += ']}'
-            
-        return result

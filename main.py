@@ -1,7 +1,5 @@
 import json
-from pickle import EMPTY_TUPLE
-from tkinter import E
-from turtle import shearfactor
+from src.models.JSONEncoder import JSONEncoder
 from src.shift_generator import ShiftGenerator
 from src.modules.api_mapper import *
 
@@ -16,8 +14,7 @@ def generate_sample(sample_path: str) -> str:
 
     _show_pretty_schedule(schedule)
 
-    result = json.loads(schedule.toJson())
-    return json.dumps(result)
+    return json.dumps(schedule, cls=JSONEncoder)
 
 def _show_pretty_schedule(schedule: Schedule):
     for employee in schedule.employees:
