@@ -69,7 +69,7 @@ isort:
       --skip site-packages .
 
 pytest:
-  stage: test
+  stage: tests
   rules:
     - when: always
   script:
