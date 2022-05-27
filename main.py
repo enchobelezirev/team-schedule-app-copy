@@ -1,5 +1,5 @@
 import json
-from src.models.JSONEncoder import JSONEncoder
+from models.encoders.JSONEncoder import JSONEncoder
 from src.shift_generator import ShiftGenerator
 from src.modules.api_mapper import *
 

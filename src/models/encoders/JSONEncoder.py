@@ -1,5 +1,4 @@
 """JSON-Encoder for module data-model."""
-# @Origami::DD abgaspro_reporting.datamodel.JSONEncoder
 import json
 from src.models.Employee import Employee
 from src.models.Shift import Shift

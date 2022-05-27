@@ -3,7 +3,7 @@ from flask import Flask, request
 from src.modules.api_mapper import *
 
 from src.shift_generator import ShiftGenerator
-from src.models.JSONEncoder import JSONEncoder
+from src.models.encoders.JSONEncoder import JSONEncoder
 
 app = Flask(__name__)
 
