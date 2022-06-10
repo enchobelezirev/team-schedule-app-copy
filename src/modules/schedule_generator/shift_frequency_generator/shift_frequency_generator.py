@@ -1,6 +1,7 @@
 import math
 from datetime import datetime, timedelta
 from typing import List
+from src.modules.restriction_manager.restriction_manager import ShiftRestrictionManager
 
 from src.models.employee import Employee
 from src.models.shift import Shift
@@ -9,7 +10,7 @@ from src.modules.schedule_generator.shift_frequency_generator.models.week_shift 
 
 class ShiftFrequencyGenerator:
     def __init__(self):
-        pass
+        self.shift_restriction_manager = ShiftRestrictionManager()
 
     def generate_schedule(
         self, employees: List[Employee], week_start: datetime, weeks_ahead_count: int, availableSlots=None
@@ -42,73 +43,36 @@ class ShiftFrequencyGenerator:
         return self._infinite_potential_idea(employee, week_start)
 
     def _infinite_potential_idea(self, employee: Employee, week_start: datetime) -> List[Shift]:
-        # shift_candidates = Take all employee possible shifts
-        employee_shifts = employee.past_shifts + employee.next_week_shifts
-        week_shift_weights = self._get_weighted_week_shift_counts(employee_shifts, week_start)
-        week_shifts = set([week_shift for week_shift, week_shift_weight in week_shift_weights.items()])
+        # shiftCandidates = Take all employee possible shifts
+        week_shift_weights = self._get_weighted_week_shift_counts(employee, week_start)
+        weekshifts = list(week_shift_weights.keys())
         current_hours = 0
-        chosen_shifts = []
 
         # while current_hours < weekly_hours
         while current_hours < employee.weekly_hours and len(week_shift_weights) > 0:
             # pick the top slot
-            top_weekly_shift = next(iter(week_shift_weights))
-            top_shift = Shift(
-                week_start + timedelta(days=top_weekly_shift.weekday, hours=top_weekly_shift.start_time),
-                week_start
-                + timedelta(
-                    days=top_weekly_shift.weekday, hours=top_weekly_shift.start_time + top_weekly_shift.full_duration / 60
-                ),
-                top_weekly_shift.duration,
-            )
-            current_hours += top_shift.duration / 60
-            chosen_shifts.append(top_shift)
+            topWeeklyShift = next(iter(week_shift_weights))
+            topShift = Shift.from_weekshift(topWeeklyShift, week_start)
+
+            current_hours += topShift.duration / 60
+            employee.next_week_shifts.append(topShift)
             # remove illegal shifts according to filled ones
-            week_shifts = set(self._remove_illegal_shifts(chosen_shifts, week_shifts, week_start))
+            weekshifts = set(self._remove_illegal_shifts(employee, weekshifts, week_start))
             # reorder the shift's preference_score (if taking times taken, it's not needed) - evalute_shift_preference()
-            week_shift_weights = {
-                week_shift: week_shift_weight
-                for week_shift, week_shift_weight in week_shift_weights.items()
-                if week_shift in week_shifts
-            }
+            week_shift_weights = {weekshift: week_shift_weight for weekshift, week_shift_weight in week_shift_weights.items() if weekshift in weekshifts}
 
-        employee.next_week_shifts += chosen_shifts
+    def _remove_illegal_shifts(self, employee: Employee, week_shift_andidates: List[Shift], week_start: datetime) -> List[Shift]:
+        filtered_shifts = week_shift_andidates.copy()
 
-    def _remove_illegal_shifts(
-        self, chosenShifts: List[Shift], week_shift_candidates: List[Shift], week_start: datetime
-    ) -> List[Shift]:
-        filtered_shifts = week_shift_candidates.copy()
-        new_shift = chosenShifts[-1]
-        best_shift_start = new_shift.start_time
-        best_shift_end = new_shift.end_time
-
-        for week_shift_candidate in week_shift_candidates:
-            shift_candidate = Shift(
-                week_start + timedelta(days=week_shift_candidate.weekday, hours=week_shift_candidate.start_time),
-                week_start
-                + timedelta(
-                    days=week_shift_candidate.weekday,
-                    hours=week_shift_candidate.start_time + week_shift_candidate.full_duration / 60,
-                ),
-                week_shift_candidate.duration,
-            )
-
-            pend_shift_start = shift_candidate.start_time
-            pend_shift_end = shift_candidate.end_time
-
-            start_diff = abs(best_shift_end - pend_shift_start)
-            endDiff = abs(best_shift_start - pend_shift_end)
-
-            startHourDiff = start_diff.days * 24 + start_diff.seconds // 3600
-            endHourDiff = endDiff.days * 24 + endDiff.seconds // 3600
-            if (startHourDiff < 12 or endHourDiff < 12) or (
-                pend_shift_start == best_shift_start and pend_shift_end == best_shift_end
-            ):
+        for week_shift_candidate in week_shift_andidates:
+            shift_candidate = Shift.from_weekshift(week_shift_candidate, week_start)
+            if not self.shift_restriction_manager.is_shift_allowed(employee, shift_candidate):
                 filtered_shifts.remove(week_shift_candidate)
 
         return filtered_shifts
 
-    def _get_weighted_week_shift_counts(self, shifts: List[WeekShift], week_start: datetime):
+    def _get_weighted_week_shift_counts(self, employee: Employee, week_start: datetime):
+        shifts = employee.past_shifts + employee.next_week_shifts
         weighted_week_shifts = {}
         for shift in shifts:
             weekshift = WeekShift(
