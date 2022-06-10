@@ -11,15 +11,17 @@ class ShiftRestrictionManager:
         return self.__has_legal_rest_between_shifts(employee, shift)
 
     def __has_legal_rest_between_shifts(self, employee: Employee, shift: Shift) -> bool:
-        shifts = employee.pastShifts + employee.nextWeekShifts + shift
-        shifts.sort(key=lambda shift: shift.endTime)
+        shifts = employee.past_shifts + employee.next_week_shifts + shift
+        shifts.sort(key=lambda shift: shift.end_time)
         shift_index = shifts.index(shift)
         if shift > 0:
             prev_shift = shifts[shift_index - 1]
             if shift.rest_time(prev_shift) < REST_BETWEEN_SHIFTS:
                 return False
+
         if shift_index < len(shifts) - 2:
             next_shift = shifts[shift_index + 1]
             if shift.rest_time(next_shift) < REST_BETWEEN_SHIFTS:
                 return False
+
         return True

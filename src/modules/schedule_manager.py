@@ -10,6 +10,6 @@ class ScheduleManager:
         self.predictor = ShiftFrequencyGenerator()
 
     def generate_schedule(
-        self, employees: List[Employee], weekStart: datetime, weeksAheadCount: int, availableSlots=None
+        self, employees: List[Employee], week_start: datetime, weeks_ahead_count: int, available_slots=None
     ):
-        self.predictor.generate_schedule(employees, weekStart, weeksAheadCount, availableSlots)
+        self.predictor.generate_schedule(employees, week_start, weeks_ahead_count, available_slots)
