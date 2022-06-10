@@ -3,7 +3,8 @@ from datetime import datetime
 
 from src.models.shift import Shift
 
-class ShiftPreferencePredictor():
+
+class ShiftPreferencePredictor:
     def __init__(self):
         pass
 

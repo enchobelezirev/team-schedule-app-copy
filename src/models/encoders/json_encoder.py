@@ -20,14 +20,14 @@ class JSONEncoder(json.JSONEncoder):
         if isinstance(o, Employee):
             json_struct = {
                 "user_id": o.uid,
-                "next_week_shifts": o.nextWeekShifts,
+                "next_week_shifts": o.next_week_shifts,
             }
             return json_struct
 
         elif isinstance(o, Shift):
             json_struct = {
-                "start_time": str(o.startTime),
-                "end_time": str(o.endTime),
+                "start_time": str(o.start_time),
+                "end_time": str(o.end_time),
                 "duration": o.duration,
             }
 
@@ -35,7 +35,7 @@ class JSONEncoder(json.JSONEncoder):
 
         elif isinstance(o, Schedule):
             json_struct = {
-                "manager_id": o.managerId,
+                "manager_id": o.manager_id,
                 "employees": o.employees,
             }
 
