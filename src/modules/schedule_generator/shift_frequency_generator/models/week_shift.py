@@ -22,4 +22,8 @@ class WeekShift:
         return hash((self.weekday, self.startTime, self.duration, self.fullDuration))
 
     def matches_shift(self, shift: Shift):
-        return self.weekday == shift.startTime.weekday() and self.startTime == shift.startTime.hour and self.duration == shift.duration
+        return (
+            self.weekday == shift.startTime.weekday()
+            and self.startTime == shift.startTime.hour
+            and self.duration == shift.duration
+        )

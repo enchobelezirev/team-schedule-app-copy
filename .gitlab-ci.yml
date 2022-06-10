@@ -20,7 +20,7 @@ flake8:
       --tee
       --output-file=gl-code-quality-report.json
       --format=gl-codeclimate
-      --max-line-length=150
+      --max-line-length=120
       --ignore=E203,E501,W503
       --exclude site-packages .
   artifacts:
@@ -51,7 +51,7 @@ black:
   allow_failure: true
   script:
     - black
-      --line-length=150
+      --line-length=120
       --check
       --exclude site-packages .
 
@@ -62,7 +62,7 @@ isort:
   allow_failure: true
   script:
     - isort
-      --line-length=150
+      --line-length=120
       --profile black
       --check
       --verbose

@@ -11,7 +11,9 @@ class ShiftFrequencyGenerator:
     def __init__(self):
         pass
 
-    def generate_schedule(self, employees: List[Employee], weekStart: datetime, weeksAheadCount: int, availableSlots=None):
+    def generate_schedule(
+        self, employees: List[Employee], weekStart: datetime, weeksAheadCount: int, availableSlots=None
+    ):
         """
         Generate the shifts for N weeks ahead.
         """
@@ -53,7 +55,10 @@ class ShiftFrequencyGenerator:
             topWeeklyShift = next(iter(weekshiftWeights))
             topShift = Shift(
                 weekStart + timedelta(days=topWeeklyShift.weekday, hours=topWeeklyShift.startTime),
-                weekStart + timedelta(days=topWeeklyShift.weekday, hours=topWeeklyShift.startTime + topWeeklyShift.fullDuration / 60),
+                weekStart
+                + timedelta(
+                    days=topWeeklyShift.weekday, hours=topWeeklyShift.startTime + topWeeklyShift.fullDuration / 60
+                ),
                 topWeeklyShift.duration,
             )
             currentHours += topShift.duration / 60
@@ -61,11 +66,17 @@ class ShiftFrequencyGenerator:
             # remove illegal shifts according to filled ones
             weekshifts = set(self._remove_illegal_shifts(chosenShifts, weekshifts, weekStart))
             # reorder the shift's preference_score (if taking times taken, it's not needed) - evalute_shift_preference()
-            weekshiftWeights = {weekshift: weekshiftWeight for weekshift, weekshiftWeight in weekshiftWeights.items() if weekshift in weekshifts}
+            weekshiftWeights = {
+                weekshift: weekshiftWeight
+                for weekshift, weekshiftWeight in weekshiftWeights.items()
+                if weekshift in weekshifts
+            }
 
         employee.nextWeekShifts += chosenShifts
 
-    def _remove_illegal_shifts(self, chosenShifts: List[Shift], weekshiftCandidates: List[Shift], weekStart: datetime) -> List[Shift]:
+    def _remove_illegal_shifts(
+        self, chosenShifts: List[Shift], weekshiftCandidates: List[Shift], weekStart: datetime
+    ) -> List[Shift]:
         filteredShifts = weekshiftCandidates.copy()
         newShift = chosenShifts[-1]
         bestShiftStart = newShift.startTime
@@ -74,7 +85,11 @@ class ShiftFrequencyGenerator:
         for weekshiftCandidate in weekshiftCandidates:
             shiftCandidate = Shift(
                 weekStart + timedelta(days=weekshiftCandidate.weekday, hours=weekshiftCandidate.startTime),
-                weekStart + timedelta(days=weekshiftCandidate.weekday, hours=weekshiftCandidate.startTime + weekshiftCandidate.fullDuration / 60),
+                weekStart
+                + timedelta(
+                    days=weekshiftCandidate.weekday,
+                    hours=weekshiftCandidate.startTime + weekshiftCandidate.fullDuration / 60,
+                ),
                 weekshiftCandidate.duration,
             )
 
@@ -86,7 +101,9 @@ class ShiftFrequencyGenerator:
 
             startHourDiff = startDiff.days * 24 + startDiff.seconds // 3600
             endHourDiff = endDiff.days * 24 + endDiff.seconds // 3600
-            if (startHourDiff < 12 or endHourDiff < 12) or (pendShiftStart == bestShiftStart and pendShiftEnd == bestShiftEnd):
+            if (startHourDiff < 12 or endHourDiff < 12) or (
+                pendShiftStart == bestShiftStart and pendShiftEnd == bestShiftEnd
+            ):
                 filteredShifts.remove(weekshiftCandidate)
 
         return filteredShifts
@@ -94,14 +111,21 @@ class ShiftFrequencyGenerator:
     def _get_weighted_week_shift_counts(self, shifts: List[WeekShift], weekStart: datetime):
         weightedWeekshifts = {}
         for shift in shifts:
-            weekshift = WeekShift(shift.startTime.weekday(), shift.startTime.hour, shift.duration, (shift.endTime - shift.startTime).seconds / 60)
+            weekshift = WeekShift(
+                shift.startTime.weekday(),
+                shift.startTime.hour,
+                shift.duration,
+                (shift.endTime - shift.startTime).seconds / 60,
+            )
             if weekshift not in weightedWeekshifts.keys():
                 weightedWeekshifts[weekshift] = self._get_weighed_shift(weekshift, shifts, weekStart)
         return dict(sorted(weightedWeekshifts.items(), key=lambda item: item[1], reverse=True))
 
     def _get_weighed_shift(self, weekshift: WeekShift, shifts: List[Shift], weekStart: datetime) -> float:
         # TODO implement "shift_frequency" function here
-        return sum([self._timespan_weight(weekStart - shift.startTime) for shift in shifts if weekshift.matches_shift(shift)])
+        return sum(
+            [self._timespan_weight(weekStart - shift.startTime) for shift in shifts if weekshift.matches_shift(shift)]
+        )
 
     def _timespan_weight(self, timediff):
         w = float(abs(timediff.days)) / 7.0
