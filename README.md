@@ -214,7 +214,7 @@ The shift frequency predictor ##TODO: Chris can you add a little bit more detail
 
 ### Black
 
-    python -m black --line-length=150 .
+    python -m black --line-length=120 .
 
 ### Isort
 
