@@ -10,10 +10,10 @@ class Shift:
     @classmethod
     def from_weekshift(cls, week_shift, week_start):
         return cls(
-                week_start + timedelta(days=week_shift.weekday, hours=week_shift.start_time),
-                week_start + timedelta(days=week_shift.weekday, hours=week_shift.start_time + week_shift.full_duration / 60),
-                week_shift.duration,
-            )
+            week_start + timedelta(days=week_shift.weekday, hours=week_shift.start_time),
+            week_start + timedelta(days=week_shift.weekday, hours=week_shift.start_time + week_shift.full_duration / 60),
+            week_shift.duration,
+        )
 
     def __hash__(self):
         return hash((self.start_time, self.end_time, self.duration))
@@ -46,5 +46,5 @@ class Shift:
         print(f" Duration: {self.duration}")
 
     def rest_time(self, shift):
-        return min(abs((self.end_time - shift.start_time).seconds / 3600 + (self.end_time - shift.start_time).days * 24), 
+        return min(abs((self.end_time - shift.start_time).seconds / 3600 + (self.end_time - shift.start_time).days * 24),
         abs((shift.end_time - self.start_time).seconds / 3600 + (shift.end_time - self.start_time).days + 24))

@@ -61,7 +61,6 @@ class ShiftFrequencyGenerator:
             # reorder the shift's preference_score (if taking times taken, it's not needed) - evalute_shift_preference()
             week_shift_weights = {weekshift: week_shift_weight for weekshift, week_shift_weight in week_shift_weights.items() if weekshift in weekshifts}
 
-
     def _remove_illegal_shifts(self, employee: Employee, week_shift_andidates: List[Shift], week_start: datetime) -> List[Shift]:
         filtered_shifts = week_shift_andidates.copy()
 
