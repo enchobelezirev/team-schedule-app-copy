@@ -194,11 +194,19 @@ The shift frequency predictor ##TODO: Chris can you add a little bit more detail
 
     python -m venv venv
 
+    Make sure you have python installed and added in the PATH environment variables
+
 ### Enter virtual environment
 
 #### Windows (powershell): 
 
     . venv\Scripts\activate
+
+    There could be a restriction on executing scripts on your machine and you may receive and error that tells you that: 
+    "cannot be loaded because running scripts is disabled on this system. For more information, see about_Execution_Policies at https:/go.microsoft.com/fwlink/?LinkID=135170."
+
+    In such case open PowerShell as an Administrator and execute command:
+    Set-ExecutionPolicy Unrestricted -Force
 
 #### Unix or MacOS : 
 
