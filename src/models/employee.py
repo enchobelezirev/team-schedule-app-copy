@@ -4,13 +4,13 @@ from src.models.shift import Shift
 
 
 class Employee:
-    def __init__(self, uid: str, weeklyHours: int, pastShifts: List[Shift]):
+    def __init__(self, uid: str, weekly_hours: int, past_shifts: List[Shift]):
         self.uid = uid
-        self.weeklyHours = weeklyHours
-        self.pastShifts = pastShifts
-        self.nextWeekShifts = []
+        self.weekly_hours = weekly_hours
+        self.past_shifts = past_shifts
+        self.next_week_shifts = []
 
     def get_last_shift(self):
-        shifts = self.pastShifts + self.nextWeekShifts
+        shifts = self.past_shifts + self.next_week_shifts
         shifts.sort(key=lambda x: x.endTime)
         return shifts[-1]

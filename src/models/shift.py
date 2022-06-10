@@ -2,30 +2,30 @@ from datetime import timedelta
 
 
 class Shift:
-    def __init__(self, startTime, endTime, duration):
-        self.startTime = startTime
-        self.endTime = endTime
+    def __init__(self, start_time, end_time, duration):
+        self.start_time = start_time
+        self.end_time = end_time
         self.duration = duration
 
     def __hash__(self):
-        return hash((self.startTime, self.endTime, self.duration))
+        return hash((self.start_time, self.end_time, self.duration))
 
     def __eq__(self, other) -> bool:
-        return self.startTime == other.startTime and self.endTime == other.endTime and self.duration == other.duration
+        return self.start_time == other.start_time and self.end_time == other.end_time and self.duration == other.duration
 
     def __gt__(self, other):
-        return self.startTime > other.startTime
+        return self.start_time > other.start_time
 
     def equals(self, other) -> bool:
-        return self.startTime == other.startTime and self.endTime == other.endTime and self.duration == other.duration
+        return self.start_time == other.start_time and self.end_time == other.end_time and self.duration == other.duration
 
     def length(self):
-        shiftLength = self.endTime - self.startTime
+        shiftLength = self.end_time - self.start_time
         return shiftLength if shiftLength > timedelta(0) else timedelta(0)
 
     def __get_matching_time_with_shift(self, other):
         # if the minimum end time is before the maximum start time, then there is an intersection
-        matchingTime = min([self.endTime, other.endTime]) - max([self.startTime, other.startTime])
+        matchingTime = min([self.end_time, other.end_time]) - max([self.start_time, other.start_time])
         return max(timedelta(0), matchingTime)
 
     def get_matching_time_with_shifts(self, shifts):
@@ -33,9 +33,9 @@ class Shift:
         return totalMatchingTime
 
     def display_values(self):
-        print(f" Start: {self.startTime}")
-        print(f" End: {self.endTime}")
+        print(f" Start: {self.start_time}")
+        print(f" End: {self.end_time}")
         print(f" Duration: {self.duration}")
 
     def rest_time(self, shift):
-        return min((self.endTime - shift.startTime).seconds / 3600, (shift.endTime - self.startTime).seconds / 3600)
+        return min((self.end_time - shift.start_time).seconds / 3600, (shift.end_time - self.start_time).seconds / 3600)
