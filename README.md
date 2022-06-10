@@ -168,7 +168,7 @@ We have two types of request - **GET** and **UPDATE**.
 
 **GET** - Get the team schedule by genereting shifts for all employees for a week or a month.
 
-**UPDATE** *[Not implemented]* - This request is a feaute, but it's purpose will be the following: To be able to offer а new schedule if an employee wants to move his shift
+**UPDATE** *[Not implemented]* - This request is a feature, but it's purpose will be the following: To be able to offer а new schedule if an employee wants to move his shift
 
 ### 3 API Mapper
 The responsibility of this module is to map the incoming request that are in JSON format to our data models.
