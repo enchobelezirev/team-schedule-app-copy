@@ -7,7 +7,7 @@ from datetime import datetime, timedelta
 ONE_EMPLOYEE_SCHEDULE_PATH = "test/data/sample_files/manager_single_employee.json"
 
 class TestApiMapper(unittest.TestCase):
-    def test_map_request_to_classes_Should_create_correct_schedule_object(self):
+    def test_map_request_to_classes_ShouldCreateCorrectScheduleObject_whenCorrectJsonDataIsGiven(self):
         # Arrange
         with open(ONE_EMPLOYEE_SCHEDULE_PATH, "r", encoding="utf-8") as file:
             sample_json = json.load(file)

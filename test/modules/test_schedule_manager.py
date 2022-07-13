@@ -6,7 +6,7 @@ from datetime import timedelta
 
 
 class TestScheduleManager(unittest.TestCase):
-    def test_generate_schedule_Should_generate_schedule_for_given_weaks_count(self):
+    def test_generate_schedule_ShouldGenerateScheduleForGivenWeaksCount_whenCalledWithCorrectData(self):
         # Arrange
         schedule_manager = ScheduleManager()
         schedule = get_schedule_with_a_single_employee()
