@@ -47,4 +47,4 @@ class Shift:
 
     def rest_time(self, shift):
         return min(abs((self.end_time - shift.start_time).seconds / 3600 + (self.end_time - shift.start_time).days * 24),
-        abs((shift.end_time - self.start_time).seconds / 3600 + (shift.end_time - self.start_time).days + 24))
+        abs((shift.end_time - self.start_time).seconds / 3600 + (shift.end_time - self.start_time).days * 24))
